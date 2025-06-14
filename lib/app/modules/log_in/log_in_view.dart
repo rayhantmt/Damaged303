@@ -1,0 +1,151 @@
+import 'package:damaged303/app/common_widgets/button.dart';
+import 'package:damaged303/app/common_widgets/text_field.dart';
+import 'package:damaged303/app/modules/log_in/log_in_controller.dart';
+import 'package:damaged303/app/utils/app_colors.dart';
+import 'package:damaged303/app/utils/app_images.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+class LogInView extends StatelessWidget {
+  const LogInView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final passwordcontroller = Get.put(PasswordFieldController());
+
+    return Scaffold(
+      appBar: AppBar(
+        actions: [
+          Text(
+            'Skip',
+            style: TextStyle(
+              fontWeight: FontWeight.w400,
+              color: AppColors.primarycolor,
+              fontSize: 18,
+            ),
+          ),
+        ],
+      ),
+
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(height: 30),
+            Text(
+              'Log in now',
+              style: TextStyle(
+                fontWeight: FontWeight.w700,
+                fontSize: 26,
+                color: Color(0xFF1B1E28),
+              ),
+            ),
+            SizedBox(height: 10),
+            Text(
+              'Please sign in to continue our app',
+              style: TextStyle(
+                fontWeight: FontWeight.w400,
+                color: Color(0xFF7D848D),
+                fontSize: 16,
+              ),
+            ),
+            SizedBox(height: 50),
+            CustomTextFormField(
+              hintText: 'arraihan815@gmail.com',
+              keyboardType: TextInputType.emailAddress,
+              obscureText: false,
+            ),
+            SizedBox(height: 20),
+            Obx(
+              () => CustomTextFormField(
+                hintText: 'Password',
+                keyboardType: TextInputType.text,
+                obscureText: passwordcontroller.isObscured.value,
+                suffixIcon: IconButton(
+                  icon: Icon(
+                    passwordcontroller.isObscured.value
+                        ? Icons.visibility_off_outlined
+                        : Icons.visibility_outlined,
+                  ),
+                  onPressed: passwordcontroller.toggleObscureText,
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: Get.width * 0.6),
+              child: TextButton(
+                onPressed: () => print('forgot password pressed'),
+                child: Text(
+                  'Forgot Password?',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    color: AppColors.primarycolor,
+                    fontSize: 14,
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 25),
+            InkWell(
+              onTap: () => print('log in pressed'),
+              child: Button(title: 'Log in'),
+            ),
+
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Don’t have an account?',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    color: Color(0xFF707B81),
+                    fontSize: 14,
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    print('fsag');
+                  },
+                  child: Text(
+                    'Sign up',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w400,
+                      color: AppColors.primarycolor,
+                      fontSize: 14,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 10),
+            Text(
+              'Or connect with',
+              style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 14,
+                color: Color(0xFF707B81),
+              ),
+            ),
+            SizedBox(height: 40),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                InkWell(
+                  child: Image.asset(AppImages.apple),
+                  onTap: () => print('apple'),
+                ),
+                SizedBox(width: 5),
+                InkWell(
+                  child: Image.asset(AppImages.google),
+                  onTap: () => print('google'),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
