@@ -1,6 +1,7 @@
 import 'package:damaged303/app/common_widgets/button.dart';
 import 'package:damaged303/app/common_widgets/text_field.dart';
 import 'package:damaged303/app/modules/log_in/log_in_controller.dart';
+import 'package:damaged303/app/modules/sign_up/sign_up_view.dart';
 import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:damaged303/app/utils/app_images.dart';
 import 'package:flutter/material.dart';
@@ -14,25 +15,14 @@ class LogInView extends StatelessWidget {
     final passwordcontroller = Get.put(PasswordFieldController());
 
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          Text(
-            'Skip',
-            style: TextStyle(
-              fontWeight: FontWeight.w400,
-              color: AppColors.primarycolor,
-              fontSize: 18,
-            ),
-          ),
-        ],
-      ),
+     
 
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: 30),
+            SizedBox(height: 90),
             Text(
               'Log in now',
               style: TextStyle(
@@ -106,7 +96,7 @@ class LogInView extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {
-                    print('fsag');
+                    Get.to(SignUp());
                   },
                   child: Text(
                     'Sign up',
