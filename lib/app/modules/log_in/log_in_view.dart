@@ -1,6 +1,7 @@
 import 'package:damaged303/app/common_widgets/button.dart';
 import 'package:damaged303/app/common_widgets/text_field.dart';
 import 'package:damaged303/app/modules/foret_password/forget_password_view.dart';
+import 'package:damaged303/app/modules/home/home_view.dart';
 import 'package:damaged303/app/modules/log_in/log_in_controller.dart';
 import 'package:damaged303/app/modules/sign_up/sign_up_view.dart';
 import 'package:damaged303/app/utils/app_colors.dart';
@@ -78,7 +79,7 @@ class LogInView extends StatelessWidget {
             ),
             SizedBox(height: 25),
             InkWell(
-              onTap: () => print('log in pressed'),
+              onTap: () => Get.offAll(HomeView()),
               child: Button(title: 'Log in'),
             ),
 
