@@ -27,16 +27,16 @@ class ThirdSplash extends StatelessWidget {
               color: AppColors.primarycolor,
             ),
           ),
-          SizedBox(height: 30),
+          SizedBox(height: 20),
           Text(
-            ' Get fast, accurate HR Help From Your\n              AI-powered Assistant.',
+            ' Get fast, accurate HR Help From \n      Your AI-powered Assistant.',
             style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 16,
               color: Color(0xFF050505),
             ),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 40),
           Text(
             'Example Prompts',
             style: TextStyle(

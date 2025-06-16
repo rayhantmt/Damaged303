@@ -16,8 +16,7 @@ class LogInView extends StatelessWidget {
     final passwordcontroller = Get.put(PasswordFieldController());
 
     return Scaffold(
-     
-
+      // appBar: AppBar(title: Text('')),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

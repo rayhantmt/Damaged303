@@ -21,7 +21,7 @@ class SecondSplash extends StatelessWidget {
           Image.asset(AppImages.splash, height: 200, width: 400),
           // SizedBox(height: 30),
           Text(
-            'Personalized \n   News Feed',
+            'Personalized \n  News Feed',
             style: TextStyle(
               fontWeight: FontWeight.w600,
               fontSize: 32,

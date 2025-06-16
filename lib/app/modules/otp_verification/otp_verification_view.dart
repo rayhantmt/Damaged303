@@ -15,7 +15,7 @@ class OtpVerificationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      appBar: AppBar(title: Text('')),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: SingleChildScrollView(
@@ -35,10 +35,7 @@ class OtpVerificationScreen extends StatelessWidget {
               Obx(
                 () => Text(
                   'Please check your email ${otpController.email.value} to see the verification code',
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.grey[700],
-                  ),
+                  style: TextStyle(fontSize: 16, color: Colors.grey[700]),
                 ),
               ),
               const SizedBox(height: 40),
@@ -65,7 +62,10 @@ class OtpVerificationScreen extends StatelessWidget {
                         LengthLimitingTextInputFormatter(1),
                         FilteringTextInputFormatter.digitsOnly,
                       ],
-                      style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                      style: const TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                      ),
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
@@ -75,7 +75,8 @@ class OtpVerificationScreen extends StatelessWidget {
                         fillColor: Colors.grey[200],
                         counterText: "",
                       ),
-                      onChanged: (value) => otpController.onOtpDigitChanged(value, index),
+                      onChanged: (value) =>
+                          otpController.onOtpDigitChanged(value, index),
                     ),
                   );
                 }),
@@ -83,9 +84,15 @@ class OtpVerificationScreen extends StatelessWidget {
               const SizedBox(height: 40),
               // Wrapped your Button widget with InkWell
               InkWell(
-                onTap: () => Get.to(ResetPassword()),//otpController.verifyOtp, // Moved the onTap functionality here
-                borderRadius: BorderRadius.circular(12), // Match button's border radius for ripple effect
-                child: const Button(title: 'Verify'), // Your custom Button widget as a child
+                onTap: () => Get.to(
+                  ResetPassword(),
+                ), //otpController.verifyOtp, // Moved the onTap functionality here
+                borderRadius: BorderRadius.circular(
+                  12,
+                ), // Match button's border radius for ripple effect
+                child: const Button(
+                  title: 'Verify',
+                ), // Your custom Button widget as a child
               ),
               const SizedBox(height: 20),
               Row(
@@ -95,35 +102,33 @@ class OtpVerificationScreen extends StatelessWidget {
                     'Resend code to',
                     style: TextStyle(
                       fontSize: 16,
-                      color:Color(0xFF7D848D),
-                      fontWeight: FontWeight.w400
+                      color: Color(0xFF7D848D),
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
-                  Obx(
-                    () {
-                      String minutes = (otpController.timerSeconds.value ~/ 60)
-                          .toString()
-                          .padLeft(2, '0');
-                      String seconds = (otpController.timerSeconds.value % 60)
-                          .toString()
-                          .padLeft(2, '0');
-                      return GestureDetector(
-                        onTap: otpController.timerSeconds.value == 0
-                            ? otpController.resendCode
-                            : null,
-                        child: Text(
-                          '$minutes:$seconds',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: otpController.timerSeconds.value == 0
-                                ? AppColors.primarycolor
-                                : Colors.grey[700],
-                            fontWeight: FontWeight.bold,
-                          ),
+                  Obx(() {
+                    String minutes = (otpController.timerSeconds.value ~/ 60)
+                        .toString()
+                        .padLeft(2, '0');
+                    String seconds = (otpController.timerSeconds.value % 60)
+                        .toString()
+                        .padLeft(2, '0');
+                    return GestureDetector(
+                      onTap: otpController.timerSeconds.value == 0
+                          ? otpController.resendCode
+                          : null,
+                      child: Text(
+                        '$minutes:$seconds',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: otpController.timerSeconds.value == 0
+                              ? AppColors.primarycolor
+                              : Colors.grey[700],
+                          fontWeight: FontWeight.bold,
                         ),
-                      );
-                    },
-                  ),
+                      ),
+                    );
+                  }),
                 ],
               ),
             ],

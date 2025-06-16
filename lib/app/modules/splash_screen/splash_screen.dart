@@ -17,7 +17,7 @@ class SplashScreen extends StatelessWidget {
         children: [
           Image.asset(AppImages.splash),
           Text(
-            'welcome to your AI-powered HR \n Assistant!',
+            'Welcome to your AI-powered \n              HR Assistant!',
             style: TextStyle(
               fontWeight: FontWeight.w500,
               fontSize: 23,
