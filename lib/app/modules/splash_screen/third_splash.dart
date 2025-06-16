@@ -37,12 +37,20 @@ class ThirdSplash extends StatelessWidget {
             ),
           ),
           SizedBox(height: 40),
-          Text(
-            'Example Prompts',
-            style: TextStyle(
-              fontWeight: FontWeight.w500,
-              fontSize: 18,
-              color: Color(0xFF050505),
+          Padding(
+            padding: const EdgeInsets.only(left: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(
+                  'Example Prompts',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 18,
+                    color: Color(0xFF050505),
+                  ),
+                ),
+              ],
             ),
           ),
           SizedBox(height: 10),
