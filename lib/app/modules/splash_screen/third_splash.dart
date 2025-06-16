@@ -3,7 +3,6 @@ import 'package:damaged303/app/common_widgets/splash_text.dart';
 import 'package:damaged303/app/modules/log_in/log_in_view.dart';
 import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:damaged303/app/utils/app_images.dart';
-import 'package:damaged303/app/utils/app_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
