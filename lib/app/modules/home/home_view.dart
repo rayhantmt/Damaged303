@@ -1,3 +1,5 @@
+import 'package:damaged303/app/common_widgets/home_stack.dart';
+import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:damaged303/app/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -112,7 +114,81 @@ class HomeView extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              Text('AI HR Conversation Start'),
+              Text(
+                'AI HR Conversation Start',
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 24,
+                  color: AppColors.primarycolor,
+                ),
+              ),
+
+              GridView(
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 20,
+                  mainAxisSpacing: 20,
+                ),
+                children: [
+                  GestureDetector(
+                    child: HomeStack(
+                      tittle: 'Organizational \nDevelopment',
+                      img: AppImages.home1,
+                    ),
+                  ),
+
+                  GestureDetector(
+                    child: HomeStack(
+                      tittle: 'HR Business\n partner',
+                      img: AppImages.home2,
+                    ),
+                  ),
+
+                  GestureDetector(
+                    child: HomeStack(
+                      tittle: 'Compensation',
+                      img: AppImages.home3,
+                    ),
+                  ),
+
+                  GestureDetector(
+                    child: HomeStack(
+                      tittle: 'Compliance',
+                      img: AppImages.home4,
+                    ),
+                  ),
+
+                  GestureDetector(
+                    child: HomeStack(
+                      tittle: 'Learning &\n Development',
+                      img: AppImages.home5,
+                    ),
+                  ),
+
+                  GestureDetector(
+                    child: HomeStack(
+                      tittle: 'Organizational\n Development',
+                      img: AppImages.home6,
+                    ),
+                  ),
+
+                  GestureDetector(
+                    child: HomeStack(
+                      tittle: 'Total Rewards',
+                      img: AppImages.home7,
+                    ),
+                  ),
+
+                  GestureDetector(
+                    child: HomeStack(
+                      tittle: 'HR Strategy',
+                      img: AppImages.home8,
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
