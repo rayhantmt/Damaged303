@@ -10,7 +10,7 @@ class HomeView extends StatelessWidget {
       appBar: AppBar(
         leading: Padding(
           padding: const EdgeInsets.only(left: 20),
-          child: CircleAvatar(backgroundImage: AssetImage(AppImages.splash)),
+          child: CircleAvatar(backgroundImage: AssetImage(AppImages.google)),
         ),
         title: const Text(
           'HR Connect',
