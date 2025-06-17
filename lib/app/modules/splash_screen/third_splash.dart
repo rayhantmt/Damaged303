@@ -70,7 +70,7 @@ class ThirdSplash extends StatelessWidget {
               color: Color(0xFF050505),
             ),
           ),
-          InkWell(
+          GestureDetector(
             onTap: () {
               Get.offAll(LogInView());
             },

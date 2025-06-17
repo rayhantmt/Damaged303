@@ -91,7 +91,7 @@ class SignUp extends StatelessWidget {
               ],
             ),
             SizedBox(height: 25),
-            InkWell(
+            GestureDetector(
               onTap: () => print('Sign up pressed'),
               child: Button(title: 'Sign up'),
             ),

@@ -78,7 +78,7 @@ class LogInView extends StatelessWidget {
               ),
             ),
             SizedBox(height: 25),
-            InkWell(
+            GestureDetector(
               onTap: () => Get.offAll(HomeView()),
               child: Button(title: 'Log in'),
             ),
@@ -123,12 +123,12 @@ class LogInView extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                InkWell(
+                GestureDetector(
                   child: Image.asset(AppImages.apple),
                   onTap: () => print('apple'),
                 ),
                 SizedBox(width: 5),
-                InkWell(
+                GestureDetector(
                   child: Image.asset(AppImages.google),
                   onTap: () => print('google'),
                 ),

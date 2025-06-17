@@ -41,7 +41,7 @@ class ForgetPassword extends StatelessWidget {
               keyboardType: TextInputType.emailAddress,
             ),
             SizedBox(height: 20),
-            InkWell(
+            GestureDetector(
               onTap: () => Get.to(OtpVerificationScreen()),
               child: Button(title: 'Reset Password'),
             ),

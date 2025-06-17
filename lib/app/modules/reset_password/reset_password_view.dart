@@ -92,7 +92,7 @@ class ResetPassword extends StatelessWidget {
               ],
             ),
             SizedBox(height: 30),
-            InkWell(
+            GestureDetector(
               onTap: () => print('password reseted'),
               child: Button(title: 'Continue'),
             ),
