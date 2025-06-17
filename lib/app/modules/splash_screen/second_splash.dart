@@ -55,7 +55,7 @@ class SecondSplash extends StatelessWidget {
           SplashText(text: 'Compensation, Benefits & Rewards'),
           SplashText(text: 'People Development & Culture'),
           SizedBox(height: 30),
-          InkWell(
+          GestureDetector(
             onTap: () {
               Get.offAll(ThirdSplash());
             },

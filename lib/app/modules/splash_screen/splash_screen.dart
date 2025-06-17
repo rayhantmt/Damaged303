@@ -34,7 +34,7 @@ class SplashScreen extends StatelessWidget {
             ),
           ),
           SizedBox(height: Get.height * 0.3),
-          InkWell(
+          GestureDetector(
             onTap: () {
               Get.offAll(SecondSplash());
             },
