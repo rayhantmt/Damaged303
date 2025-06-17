@@ -111,6 +111,8 @@ class HomeView extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(height: 20),
+              Text('AI HR Conversation Start'),
             ],
           ),
         ),
