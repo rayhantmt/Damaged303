@@ -7,3 +7,11 @@ class PasswordFieldController extends GetxController {
     isObscured.value = !isObscured.value;
   }
 }
+
+class TermsController extends GetxController {
+  var isChecked = false.obs;
+
+  void toggleCheckbox(bool? value) {
+    isChecked.value = value ?? false;
+  }
+}

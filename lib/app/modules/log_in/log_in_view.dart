@@ -1,7 +1,7 @@
 import 'package:damaged303/app/common_widgets/button.dart';
 import 'package:damaged303/app/common_widgets/text_field.dart';
 import 'package:damaged303/app/modules/foret_password/forget_password_view.dart';
-import 'package:damaged303/app/modules/home/home_view.dart';
+
 import 'package:damaged303/app/modules/log_in/log_in_controller.dart';
 import 'package:damaged303/app/modules/main_screen/main_screen_view.dart';
 import 'package:damaged303/app/modules/sign_up/sign_up_view.dart';
@@ -16,7 +16,7 @@ class LogInView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final passwordcontroller = Get.put(PasswordFieldController());
-
+    final TermsController controller = Get.put(TermsController());
     return Scaffold(
       // appBar: AppBar(title: Text('')),
       body: SingleChildScrollView(
@@ -79,6 +79,52 @@ class LogInView extends StatelessWidget {
               ),
             ),
             SizedBox(height: 25),
+            Row(
+              children: [
+                Obx(
+                  () => Checkbox(
+                    value: controller.isChecked.value,
+                    onChanged: controller.toggleCheckbox,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                    activeColor: AppColors.primarycolor,
+                  ),
+                ),
+                Text(
+                  'I agree to the ',
+                  style: TextStyle(fontWeight: FontWeight.w400, fontSize: 14),
+                ),
+                GestureDetector(
+                  child: Text(
+                    'Tearms of Use',
+                    style: TextStyle(
+                      decoration: TextDecoration.underline,
+                      color: AppColors.primarycolor,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 14,
+                    ),
+                  ),
+                ),
+                Text(
+                  ' and ',
+                  style: TextStyle(fontWeight: FontWeight.w400, fontSize: 14),
+                ),
+                GestureDetector(
+                  onTap: () {},
+                  child: Text(
+                    'Privacy policy.',
+                    style: TextStyle(
+                      decoration: TextDecoration.underline,
+                      color: AppColors.primarycolor,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 14,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
             GestureDetector(
               onTap: () => Get.offAll(MainScreen()),
               child: Button(title: 'Log in'),

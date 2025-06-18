@@ -1,5 +1,6 @@
 import 'package:damaged303/app/common_widgets/button.dart';
 import 'package:damaged303/app/common_widgets/text_field.dart';
+import 'package:damaged303/app/modules/log_in/log_in_controller.dart';
 import 'package:damaged303/app/modules/log_in/log_in_view.dart';
 import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:damaged303/app/utils/app_images.dart';
@@ -18,6 +19,7 @@ class SignUp extends StatelessWidget {
   SignUp({super.key});
 
   final PasswordController passwordcontroller = Get.put(PasswordController());
+  final TermsController controller = Get.put(TermsController());
 
   @override
   Widget build(BuildContext context) {
@@ -91,6 +93,52 @@ class SignUp extends StatelessWidget {
               ],
             ),
             SizedBox(height: 25),
+
+            Row(
+              children: [
+                Obx(
+                  () => Checkbox(
+                    value: controller.isChecked.value,
+                    onChanged: controller.toggleCheckbox,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                    activeColor: AppColors.primarycolor,
+                  ),
+                ),
+                Text(
+                  'I agree to the ',
+                  style: TextStyle(fontWeight: FontWeight.w400, fontSize: 14),
+                ),
+                GestureDetector(
+                  child: Text(
+                    'Tearms of Use',
+                    style: TextStyle(
+                      decoration: TextDecoration.underline,
+                      color: AppColors.primarycolor,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 14,
+                    ),
+                  ),
+                ),
+                Text(
+                  ' and ',
+                  style: TextStyle(fontWeight: FontWeight.w400, fontSize: 14),
+                ),
+                GestureDetector(
+                  onTap: () {},
+                  child: Text(
+                    'Privacy policy.',
+                    style: TextStyle(
+                      decoration: TextDecoration.underline,
+                      color: AppColors.primarycolor,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 14,
+                    ),
+                  ),
+                ),
+              ],
+            ),
             GestureDetector(
               onTap: () => print('Sign up pressed'),
               child: Button(title: 'Sign up'),
