@@ -1,5 +1,6 @@
 import 'package:damaged303/app/common_widgets/button.dart';
 import 'package:damaged303/app/common_widgets/hr_select.dart';
+import 'package:damaged303/app/modules/log_in/log_in_view.dart';
 import 'package:damaged303/app/modules/onboarding/onboarding_controller.dart';
 import 'package:damaged303/app/utils/app_images.dart';
 import 'package:flutter/material.dart';
@@ -10,13 +11,13 @@ class OnboardingView extends StatelessWidget {
 
   final List<Map<String, String>> roles = [
     {'title': 'Talent Acquisition', 'image': AppImages.home1},
-    {'title': 'HR Business Partner', 'image': AppImages.home1},
-    {'title': 'Compensation', 'image': AppImages.home1},
-    {'title': 'Learning & Development', 'image': AppImages.home1},
-    {'title': 'Compliance', 'image': AppImages.home1},
-    {'title': 'Organizational Development', 'image': AppImages.home1},
-    {'title': 'Total Rewards', 'image': AppImages.home1},
-    {'title': 'HR Strategy', 'image': AppImages.home1},
+    {'title': 'HR Business Partner', 'image': AppImages.home2},
+    {'title': 'Compensation', 'image': AppImages.home3},
+    {'title': 'Learning & Development', 'image': AppImages.home4},
+    {'title': 'Compliance', 'image': AppImages.home5},
+    {'title': 'Organizational Development', 'image': AppImages.home6},
+    {'title': 'Total Rewards', 'image': AppImages.home7},
+    {'title': 'HR Strategy', 'image': AppImages.home8},
   ];
 
   OnboardingView({super.key});
@@ -68,7 +69,13 @@ class OnboardingView extends StatelessWidget {
               ),
             ),
 
-            Button(title: 'Next'),
+            GestureDetector(
+              onTap: () {
+                Get.to(LogInView());
+              },
+
+              child: Button(title: 'Next'),
+            ),
           ],
         ),
       ),
