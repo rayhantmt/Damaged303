@@ -63,7 +63,6 @@ class HomeView extends StatelessWidget {
                           bottom: 10,
                         ),
                         child: Column(
-                          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
@@ -130,23 +129,27 @@ class HomeView extends StatelessWidget {
                   crossAxisCount: 2,
                   crossAxisSpacing: 20,
                   mainAxisSpacing: 20,
+                  childAspectRatio: 0.79,
                 ),
                 children: [
                   GestureDetector(
+                    onTap: () {},
                     child: HomeStack(
-                      tittle: 'Organizational \nDevelopment',
+                      tittle: 'Talent Acquisition',
                       img: AppImages.home1,
                     ),
                   ),
 
                   GestureDetector(
+                    onTap: () {},
                     child: HomeStack(
-                      tittle: 'HR Business\n partner',
+                      tittle: 'HR Business\n      Partner',
                       img: AppImages.home2,
                     ),
                   ),
 
                   GestureDetector(
+                    onTap: () {},
                     child: HomeStack(
                       tittle: 'Compensation',
                       img: AppImages.home3,
@@ -154,6 +157,7 @@ class HomeView extends StatelessWidget {
                   ),
 
                   GestureDetector(
+                    onTap: () {},
                     child: HomeStack(
                       tittle: 'Compliance',
                       img: AppImages.home4,
@@ -161,13 +165,15 @@ class HomeView extends StatelessWidget {
                   ),
 
                   GestureDetector(
+                    onTap: () {},
                     child: HomeStack(
-                      tittle: 'Learning &\n Development',
+                      tittle: '   Learning &\n Development',
                       img: AppImages.home5,
                     ),
                   ),
 
                   GestureDetector(
+                    onTap: () {},
                     child: HomeStack(
                       tittle: 'Organizational\n Development',
                       img: AppImages.home6,
@@ -175,6 +181,7 @@ class HomeView extends StatelessWidget {
                   ),
 
                   GestureDetector(
+                    onTap: () {},
                     child: HomeStack(
                       tittle: 'Total Rewards',
                       img: AppImages.home7,
@@ -182,6 +189,7 @@ class HomeView extends StatelessWidget {
                   ),
 
                   GestureDetector(
+                    onTap: () {},
                     child: HomeStack(
                       tittle: 'HR Strategy',
                       img: AppImages.home8,
