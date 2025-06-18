@@ -1,6 +1,6 @@
 import 'package:damaged303/app/common_widgets/button.dart';
 import 'package:damaged303/app/common_widgets/splash_text.dart';
-import 'package:damaged303/app/modules/log_in/log_in_view.dart';
+import 'package:damaged303/app/modules/onboarding/onboarding_view.dart';
 import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:damaged303/app/utils/app_images.dart';
 import 'package:flutter/material.dart';
@@ -57,7 +57,7 @@ class ThirdSplash extends StatelessWidget {
 
           SplashText(text: 'Prepare for a difficult conversation'),
 
-          SplashText(text: 'What’s new in Caifonia labor law?'),
+          SplashText(text: "What's new in Caifonia labor law?"),
           SplashText(text: 'Talent Acquisition & Labor Trends'),
           SplashText(text: 'Compensation, Benefits & Rewards'),
           SplashText(text: 'People Development & Culture'),
@@ -72,11 +72,10 @@ class ThirdSplash extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              Get.offAll(LogInView());
+              Get.offAll(OnboardingView());
             },
             child: Button(title: 'Next'),
           ),
-          // SizedBox(height: 30),
         ],
       ),
     );
