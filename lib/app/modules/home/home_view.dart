@@ -1,4 +1,5 @@
 import 'package:damaged303/app/common_widgets/home_stack.dart';
+import 'package:damaged303/app/modules/chat/caht_view.dart';
 import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:damaged303/app/utils/app_images.dart';
 import 'package:flutter/material.dart';
@@ -133,7 +134,9 @@ class HomeView extends StatelessWidget {
                 ),
                 children: [
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(CahtView());
+                    },
                     child: HomeStack(
                       tittle: 'Talent Acquisition',
                       img: AppImages.home1,
@@ -141,7 +144,9 @@ class HomeView extends StatelessWidget {
                   ),
 
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(CahtView());
+                    },
                     child: HomeStack(
                       tittle: 'HR Business\n      Partner',
                       img: AppImages.home2,
@@ -149,7 +154,9 @@ class HomeView extends StatelessWidget {
                   ),
 
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(CahtView());
+                    },
                     child: HomeStack(
                       tittle: 'Compensation',
                       img: AppImages.home3,
@@ -157,7 +164,9 @@ class HomeView extends StatelessWidget {
                   ),
 
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(CahtView());
+                    },
                     child: HomeStack(
                       tittle: 'Compliance',
                       img: AppImages.home4,
@@ -165,7 +174,9 @@ class HomeView extends StatelessWidget {
                   ),
 
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(CahtView());
+                    },
                     child: HomeStack(
                       tittle: '   Learning &\n Development',
                       img: AppImages.home5,
@@ -173,7 +184,9 @@ class HomeView extends StatelessWidget {
                   ),
 
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(CahtView());
+                    },
                     child: HomeStack(
                       tittle: 'Organizational\n Development',
                       img: AppImages.home6,
@@ -181,7 +194,9 @@ class HomeView extends StatelessWidget {
                   ),
 
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(CahtView());
+                    },
                     child: HomeStack(
                       tittle: 'Total Rewards',
                       img: AppImages.home7,
@@ -189,7 +204,9 @@ class HomeView extends StatelessWidget {
                   ),
 
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(CahtView());
+                    },
                     child: HomeStack(
                       tittle: 'HR Strategy',
                       img: AppImages.home8,

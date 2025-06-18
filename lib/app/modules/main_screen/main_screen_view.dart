@@ -1,5 +1,8 @@
+import 'package:damaged303/app/modules/chat/caht_view.dart';
 import 'package:damaged303/app/modules/home/home_view.dart';
 import 'package:damaged303/app/modules/main_screen/main_screen_controller.dart';
+import 'package:damaged303/app/modules/news/news_view.dart';
+import 'package:damaged303/app/modules/profile/porfile_view.dart';
 import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -7,7 +10,12 @@ import 'package:get/get.dart';
 class MainScreen extends StatelessWidget {
   final BottomNavController navController = Get.put(BottomNavController());
 
-  final List<Widget> screens = [HomeView()];
+  final List<Widget> screens = [
+    HomeView(),
+    CahtView(),
+    NewsView(),
+    PorfileView(),
+  ];
 
   @override
   Widget build(BuildContext context) {
