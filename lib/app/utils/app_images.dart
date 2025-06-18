@@ -11,4 +11,8 @@ class AppImages {
   static const String home6 = 'assets/images/home_s6.png';
   static const String home7 = 'assets/images/home_s7.png';
   static const String home8 = 'assets/images/home_s8.png';
+  static const String visa = 'assets/images/visa.png';
+  static const String mastercard = 'assets/images/mastercard.png';
+  static const String american_express = 'assets/images/american_express.png';
+  static const String apple_pay = 'assets/images/apple_pay.png';
 }

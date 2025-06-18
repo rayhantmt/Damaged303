@@ -1,6 +1,7 @@
 import 'package:damaged303/app/common_widgets/button.dart';
 import 'package:damaged303/app/common_widgets/plan_card.dart';
 import 'package:damaged303/app/common_widgets/premium_basic_text.dart';
+import 'package:damaged303/app/modules/payment/payment_view.dart';
 import 'package:damaged303/app/modules/subscription_screen/subscription_controller.dart';
 import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:damaged303/app/utils/app_images.dart';
@@ -53,7 +54,12 @@ class Subscription extends StatelessWidget {
             note: 'Save 50%',
             isPopular: true,
           ),
-          Button(title: 'Subscribe Now'),
+          GestureDetector(
+            onTap: () {
+              Get.to(PaymentView());
+            },
+            child: Button(title: 'Subscribe Now'),
+          ),
         ],
       ),
     );
