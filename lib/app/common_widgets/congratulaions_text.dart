@@ -1,3 +1,4 @@
+import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CongratulaionsText extends StatelessWidget {
@@ -6,6 +7,7 @@ class CongratulaionsText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Text(
           'Benefits Unlocked:',
@@ -14,6 +16,50 @@ class CongratulaionsText extends StatelessWidget {
             fontSize: 18,
             color: Color(0xFF050505),
           ),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.check_circle, color: AppColors.primarycolor, size: 24.0),
+            Text(
+              'Unlimited Persona access',
+              style: TextStyle(
+                fontWeight: FontWeight.w400,
+                color: Color(0xFF050505),
+                fontSize: 16,
+              ),
+            ),
+          ],
+        ),
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.check_circle, color: AppColors.primarycolor, size: 24.0),
+            Text(
+              'Bookmark Favorite Prompts',
+              style: TextStyle(
+                fontWeight: FontWeight.w400,
+                color: Color(0xFF050505),
+                fontSize: 16,
+              ),
+            ),
+          ],
+        ),
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.check_circle, color: AppColors.primarycolor, size: 24.0),
+            Text(
+              'Save conversations',
+              style: TextStyle(
+                fontWeight: FontWeight.w400,
+                color: Color(0xFF050505),
+                fontSize: 16,
+              ),
+            ),
+          ],
         ),
       ],
     );

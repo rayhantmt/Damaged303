@@ -1,8 +1,10 @@
 import 'package:damaged303/app/common_widgets/button.dart';
 import 'package:damaged303/app/common_widgets/congratulaions_text.dart';
 import 'package:damaged303/app/common_widgets/splash_text.dart';
+import 'package:damaged303/app/modules/main_screen/main_screen_view.dart';
 import 'package:damaged303/app/utils/app_images.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CongratulationView extends StatelessWidget {
   const CongratulationView({super.key});
@@ -15,6 +17,7 @@ class CongratulationView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          SizedBox(height: 50),
           Image.asset(AppImages.congratulations),
           Text(
             'Congratulations',
@@ -26,8 +29,12 @@ class CongratulationView extends StatelessWidget {
           ),
 
           CongratulaionsText(),
-          Button(title: 'Home'),
-          SizedBox(height: 5),
+          GestureDetector(
+            onTap: () {
+              Get.to(MainScreen());
+            },
+            child: Button(title: 'Home'),
+          ),
         ],
       ),
     );
