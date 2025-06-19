@@ -1,0 +1,35 @@
+import 'package:damaged303/app/common_widgets/button.dart';
+import 'package:damaged303/app/common_widgets/congratulaions_text.dart';
+import 'package:damaged303/app/common_widgets/splash_text.dart';
+import 'package:damaged303/app/utils/app_images.dart';
+import 'package:flutter/material.dart';
+
+class CongratulationView extends StatelessWidget {
+  const CongratulationView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Image.asset(AppImages.congratulations),
+          Text(
+            'Congratulations',
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 34,
+              color: Color(0xFF121212),
+            ),
+          ),
+
+          CongratulaionsText(),
+          Button(title: 'Home'),
+          SizedBox(height: 5),
+        ],
+      ),
+    );
+  }
+}
