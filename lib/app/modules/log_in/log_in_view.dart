@@ -81,6 +81,7 @@ class LogInView extends StatelessWidget {
             ),
             SizedBox(height: 25),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Obx(
                   () => Checkbox(

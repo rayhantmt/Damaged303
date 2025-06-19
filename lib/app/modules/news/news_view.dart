@@ -6,7 +6,17 @@ class NewsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('News'), centerTitle: true),
+      appBar: AppBar(
+        title: Text(
+          'News Feed',
+          style: TextStyle(
+            fontWeight: FontWeight.w500,
+            fontSize: 24,
+            color: Color(0xFF1B1E28),
+          ),
+        ),
+        centerTitle: true,
+      ),
       body: Column(
         children: [
           SingleChildScrollView(child: Center(child: Text("News Screen"))),

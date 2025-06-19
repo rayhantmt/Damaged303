@@ -7,7 +7,7 @@ class CongratulaionsText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
           'Benefits Unlocked:',
@@ -20,6 +20,7 @@ class CongratulaionsText extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            SizedBox(width: 40),
             Icon(Icons.check_circle, color: AppColors.primarycolor, size: 24.0),
             Text(
               'Unlimited Persona access',
@@ -35,6 +36,7 @@ class CongratulaionsText extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            SizedBox(width: 55),
             Icon(Icons.check_circle, color: AppColors.primarycolor, size: 24.0),
             Text(
               'Bookmark Favorite Prompts',
@@ -50,6 +52,7 @@ class CongratulaionsText extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            SizedBox(),
             Icon(Icons.check_circle, color: AppColors.primarycolor, size: 24.0),
             Text(
               'Save conversations',

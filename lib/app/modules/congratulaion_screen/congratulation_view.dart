@@ -1,6 +1,6 @@
 import 'package:damaged303/app/common_widgets/button.dart';
 import 'package:damaged303/app/common_widgets/congratulaions_text.dart';
-import 'package:damaged303/app/common_widgets/splash_text.dart';
+
 import 'package:damaged303/app/modules/main_screen/main_screen_view.dart';
 import 'package:damaged303/app/utils/app_images.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +31,7 @@ class CongratulationView extends StatelessWidget {
           CongratulaionsText(),
           GestureDetector(
             onTap: () {
-              Get.to(MainScreen());
+              Get.offAll(MainScreen());
             },
             child: Button(title: 'Home'),
           ),
