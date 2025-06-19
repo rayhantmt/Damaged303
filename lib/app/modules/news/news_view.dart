@@ -37,10 +37,10 @@ class NewsView extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
-        children: [
-          SingleChildScrollView(
-            child: Padding(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Container(
                 child: TextFormField(
@@ -56,8 +56,25 @@ class NewsView extends StatelessWidget {
                 ),
               ),
             ),
-          ),
-        ],
+
+            Padding(
+              padding: const EdgeInsets.only(left: 20, right: 20),
+              child: Container(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    icon: Icon(Icons.search),
+                    hintText: 'Select a category',
+                  ),
+                ),
+                height: 45,
+                decoration: BoxDecoration(
+                  border: Border.all(width: 1, color: Color(0xFFB0C3C2)),
+                  borderRadius: BorderRadius.circular(6),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
