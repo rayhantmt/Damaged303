@@ -13,3 +13,15 @@ class NewsModel {
     NewsCategory(category: 'People Development & Culture'),
   ];
 }
+
+class newsdetailsmodel {
+  final List<String> tags;
+  final String headline;
+  final String description;
+
+  newsdetailsmodel({
+    required this.tags,
+    required this.headline,
+    required this.description,
+  });
+}

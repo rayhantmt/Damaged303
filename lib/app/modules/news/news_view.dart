@@ -56,15 +56,13 @@ class NewsView extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(height: 10),
 
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Container(
                 child: TextFormField(
-                  decoration: InputDecoration(
-                    icon: Icon(Icons.search),
-                    hintText: 'Select a category',
-                  ),
+                  decoration: InputDecoration(hintText: 'Select a category'),
                 ),
                 height: 45,
                 decoration: BoxDecoration(
