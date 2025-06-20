@@ -1,5 +1,6 @@
 import 'package:damaged303/app/common_widgets/home_stack.dart';
 import 'package:damaged303/app/modules/chat/caht_view.dart';
+import 'package:damaged303/app/modules/news/news_view.dart';
 import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:damaged303/app/utils/app_images.dart';
 import 'package:flutter/material.dart';
@@ -83,9 +84,11 @@ class HomeView extends StatelessWidget {
                                 color: Color(0xFFFFFFFF),
                               ),
                             ),
-                            SizedBox(height: 20),
+                            SizedBox(height: 10),
                             GestureDetector(
-                              onTap: () {},
+                              onTap: () {
+                                Get.to(NewsView());
+                              },
                               child: Container(
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(6),

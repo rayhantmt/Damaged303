@@ -24,7 +24,7 @@ class HomeStack extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                   child: Image.asset(img, fit: BoxFit.contain),
                 ),
-                SizedBox(height: 5),
+                //SizedBox(height: 5),
                 Text(
                   tittle,
                   style: TextStyle(
