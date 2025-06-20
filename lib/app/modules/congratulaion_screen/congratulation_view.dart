@@ -14,10 +14,10 @@ class CongratulationView extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(height: 50),
+          SizedBox(height: Get.height * .1),
           Image.asset(AppImages.congratulations),
           Text(
             'Congratulations',
@@ -27,8 +27,9 @@ class CongratulationView extends StatelessWidget {
               color: Color(0xFF121212),
             ),
           ),
-
+          SizedBox(height: Get.height * .05),
           CongratulaionsText(),
+          SizedBox(height: Get.height * .25),
           GestureDetector(
             onTap: () {
               Get.offAll(MainScreen());

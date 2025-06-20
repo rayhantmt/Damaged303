@@ -20,8 +20,11 @@ class CongratulaionsText extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(width: 40),
-            Icon(Icons.check_circle, color: AppColors.primarycolor, size: 24.0),
+            Icon(
+              Icons.check_circle_outline,
+              color: AppColors.primarycolor,
+              size: 24.0,
+            ),
             Text(
               'Unlimited Persona access',
               style: TextStyle(
@@ -36,8 +39,11 @@ class CongratulaionsText extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(width: 55),
-            Icon(Icons.check_circle, color: AppColors.primarycolor, size: 24.0),
+            Icon(
+              Icons.check_circle_outline,
+              color: AppColors.primarycolor,
+              size: 24.0,
+            ),
             Text(
               'Bookmark Favorite Prompts',
               style: TextStyle(
@@ -52,8 +58,11 @@ class CongratulaionsText extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(),
-            Icon(Icons.check_circle, color: AppColors.primarycolor, size: 24.0),
+            Icon(
+              Icons.check_circle_outline,
+              color: AppColors.primarycolor,
+              size: 24.0,
+            ),
             Text(
               'Save conversations',
               style: TextStyle(

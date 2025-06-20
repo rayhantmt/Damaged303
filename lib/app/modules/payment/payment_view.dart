@@ -80,6 +80,17 @@ class _PaymentViewState extends State<PaymentView> {
                 children: [
                   Expanded(
                     child: Container(
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          hint: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text('MM // YYYY'),
+                              Icon(Icons.calendar_month_outlined),
+                            ],
+                          ),
+                        ),
+                      ),
                       height: 45,
                       decoration: BoxDecoration(
                         border: Border.all(width: 1, color: Color(0xFFB0C3C2)),
@@ -90,6 +101,17 @@ class _PaymentViewState extends State<PaymentView> {
                   SizedBox(width: 10),
                   Expanded(
                     child: Container(
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          hint: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text('CVC'),
+                              Icon(Icons.verified_user_outlined),
+                            ],
+                          ),
+                        ),
+                      ),
                       height: 45,
                       decoration: BoxDecoration(
                         border: Border.all(width: 1, color: Color(0xFFB0C3C2)),
@@ -145,7 +167,7 @@ class _PaymentViewState extends State<PaymentView> {
                 ),
               ),
             ),
-            // SizedBox(height: 5),
+            SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Container(
@@ -159,7 +181,7 @@ class _PaymentViewState extends State<PaymentView> {
                 ),
               ),
             ),
-            SizedBox(height: 15),
+            SizedBox(height: 40),
             Padding(
               padding: const EdgeInsets.only(left: 20),
               child: Row(
@@ -176,12 +198,12 @@ class _PaymentViewState extends State<PaymentView> {
                 ],
               ),
             ),
-            //SizedBox(height: 10),
+            SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Container(
                 child: TextFormField(
-                  decoration: InputDecoration(hintText: 'Newmember'),
+                  decoration: InputDecoration(hintText: 'New_Member'),
 
                   //controller creation left
                 ),
@@ -192,7 +214,7 @@ class _PaymentViewState extends State<PaymentView> {
                 ),
               ),
             ),
-
+            SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Container(
@@ -204,7 +226,7 @@ class _PaymentViewState extends State<PaymentView> {
                 ),
               ),
             ),
-
+            SizedBox(height: 30),
             GestureDetector(
               onTap: () {
                 Get.to(CongratulationView());
