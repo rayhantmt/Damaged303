@@ -1,6 +1,7 @@
 import 'package:damaged303/app/modules/main_screen/main_screen_controller.dart';
 
 import 'package:damaged303/app/modules/news/news_model.dart';
+import 'package:damaged303/app/modules/news_details/news_details_view.dart';
 import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -147,7 +148,15 @@ class NewsView extends StatelessWidget {
                       ),
                       SizedBox(height: 10),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(
+                            NewsDetailsView(
+                              tags: tags,
+                              headline: newsList[index].headline,
+                              description: newsList[index].description,
+                            ),
+                          );
+                        },
                         child: Text(
                           overflow: TextOverflow.ellipsis,
                           maxLines: 3,
