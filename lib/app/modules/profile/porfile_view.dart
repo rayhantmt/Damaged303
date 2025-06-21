@@ -1,4 +1,5 @@
 import 'package:damaged303/app/common_widgets/button.dart';
+import 'package:damaged303/app/common_widgets/profile_helper_text.dart';
 import 'package:damaged303/app/utils/app_images.dart';
 import 'package:flutter/material.dart';
 
@@ -36,19 +37,16 @@ class PorfileView extends StatelessWidget {
           ),
           Button(title: 'Subscribe Now'),
 
-          GestureDetector(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Icon(Icons.notifications_active_outlined),
-                Text("Notification"),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [Icon(Icons.arrow_forward_ios_outlined)],
-                ),
-              ],
-            ),
+          ProfileHelp(
+            icon: Icons.notifications_active_outlined,
+            text: 'Notification',
           ),
+          ProfileHelp(
+            icon: Icons.insert_drive_file_outlined,
+            text: 'Privacy Policy',
+          ),
+          ProfileHelp(icon: Icons.lock_outline_sharp, text: 'Forgot Password'),
+          ProfileHelp(icon: Icons.logout_outlined, text: 'Log out'),
         ],
       ),
     );
