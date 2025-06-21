@@ -37,15 +37,26 @@ class PorfileView extends StatelessWidget {
           ),
           Button(title: 'Subscribe Now'),
 
-          ProfileHelp(
-            icon: Icons.notifications_active_outlined,
-            text: 'Notification',
+          GestureDetector(
+            child: ProfileHelp(
+              icon: Icons.notifications_active_outlined,
+              text: 'Notification',
+            ),
           ),
-          ProfileHelp(
-            icon: Icons.insert_drive_file_outlined,
-            text: 'Privacy Policy',
+          GestureDetector(
+            onTap: () {},
+            child: ProfileHelp(
+              icon: Icons.insert_drive_file_outlined,
+              text: 'Privacy Policy',
+            ),
           ),
-          ProfileHelp(icon: Icons.lock_outline_sharp, text: 'Forgot Password'),
+          GestureDetector(
+            onTap: () {},
+            child: ProfileHelp(
+              icon: Icons.lock_outline_sharp,
+              text: 'Forgot Password',
+            ),
+          ),
           GestureDetector(
             onTap: () {},
             child: Padding(
