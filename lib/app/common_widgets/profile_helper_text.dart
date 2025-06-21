@@ -8,30 +8,25 @@ class ProfileHelp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 20, right: 20),
-      child: GestureDetector(
-        onTap: () {
-          // Handle tap
-        },
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Row(
-              children: [
-                Icon(icon, color: Color(0xff7D848D)),
-                SizedBox(width: 8),
-                Text(
-                  text,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 16,
-                    color: Color(0xff7D848D),
-                  ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(
+            children: [
+              Icon(icon, color: Color(0xff7D848D)),
+              SizedBox(width: 8),
+              Text(
+                text,
+                style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 16,
+                  color: Color(0xff7D848D),
                 ),
-              ],
-            ),
-            Icon(Icons.arrow_forward_ios_outlined, size: 16),
-          ],
-        ),
+              ),
+            ],
+          ),
+          Icon(Icons.arrow_forward_ios_outlined, size: 16),
+        ],
       ),
     );
   }
