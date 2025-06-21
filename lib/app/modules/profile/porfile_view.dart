@@ -1,6 +1,8 @@
 import 'package:damaged303/app/common_widgets/button.dart';
 import 'package:damaged303/app/common_widgets/profile_helper_text.dart';
 import 'package:damaged303/app/modules/foret_password/forget_password_view.dart';
+import 'package:damaged303/app/modules/log_in/log_in_view.dart';
+import 'package:damaged303/app/modules/notifications/notifications_view.dart';
 import 'package:damaged303/app/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -40,6 +42,9 @@ class PorfileView extends StatelessWidget {
           Button(title: 'Subscribe Now'),
           SizedBox(height: 30),
           GestureDetector(
+            onTap: () {
+              Get.to(NotificationsView());
+            },
             child: ProfileHelp(
               icon: Icons.notifications_active_outlined,
               text: 'Notification',
@@ -66,10 +71,49 @@ class PorfileView extends StatelessWidget {
           SizedBox(height: 30),
           GestureDetector(
             onTap: () {
-              Get.snackbar(
-                snackPosition: SnackPosition.BOTTOM,
-                'Logged Out',
-                'You have been logged out successfully',
+              showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  title: Text('Log out', textAlign: TextAlign.center),
+                  content: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        'Are you sure you want to log out?',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 14, color: Colors.black54),
+                      ),
+                      SizedBox(height: 24),
+                      GestureDetector(
+                        onTap: () {
+                          Get.to(LogInView());
+                        },
+                        child: Text(
+                          'Yes',
+                          style: TextStyle(
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 16),
+                      GestureDetector(
+                        onTap: () {
+                          Get.back();
+                        },
+                        child: Text(
+                          'No',
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               );
             },
             child: Padding(
