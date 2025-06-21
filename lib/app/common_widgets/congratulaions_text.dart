@@ -1,3 +1,4 @@
+import 'package:damaged303/app/common_widgets/premium_basic_text.dart';
 import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -17,62 +18,12 @@ class CongratulaionsText extends StatelessWidget {
             color: Color(0xFF050505),
           ),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.check_circle_outline,
-              color: AppColors.primarycolor,
-              size: 24.0,
-            ),
-            Text(
-              'Unlimited Persona access',
-              style: TextStyle(
-                fontWeight: FontWeight.w400,
-                color: Color(0xFF050505),
-                fontSize: 16,
-              ),
-            ),
-          ],
-        ),
-
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.check_circle_outline,
-              color: AppColors.primarycolor,
-              size: 24.0,
-            ),
-            Text(
-              'Bookmark Favorite Prompts',
-              style: TextStyle(
-                fontWeight: FontWeight.w400,
-                color: Color(0xFF050505),
-                fontSize: 16,
-              ),
-            ),
-          ],
-        ),
-
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.check_circle_outline,
-              color: AppColors.primarycolor,
-              size: 24.0,
-            ),
-            Text(
-              'Save conversations',
-              style: TextStyle(
-                fontWeight: FontWeight.w400,
-                color: Color(0xFF050505),
-                fontSize: 16,
-              ),
-            ),
-          ],
-        ),
+        PremiumBasicText(tittle: 'Unlimited Persona access'),
+        SizedBox(height: 6),
+        PremiumBasicText(tittle: 'Bookmark Favorite Prompts'),
+        SizedBox(height: 6),
+        PremiumBasicText(tittle: 'Save conversations'),
+        SizedBox(height: 30),
       ],
     );
   }
