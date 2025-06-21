@@ -37,18 +37,16 @@ class PorfileView extends StatelessWidget {
           Button(title: 'Subscribe Now'),
 
           GestureDetector(
-            child: Expanded(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Icon(Icons.notifications_active_outlined),
-                  Text("Notification"),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [Icon(Icons.arrow_forward_ios_outlined)],
-                  ),
-                ],
-              ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Icon(Icons.notifications_active_outlined),
+                Text("Notification"),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [Icon(Icons.arrow_forward_ios_outlined)],
+                ),
+              ],
             ),
           ),
         ],
