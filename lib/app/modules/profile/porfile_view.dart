@@ -1,7 +1,9 @@
 import 'package:damaged303/app/common_widgets/button.dart';
 import 'package:damaged303/app/common_widgets/profile_helper_text.dart';
+import 'package:damaged303/app/modules/foret_password/forget_password_view.dart';
 import 'package:damaged303/app/utils/app_images.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class PorfileView extends StatelessWidget {
   const PorfileView({super.key});
@@ -36,13 +38,14 @@ class PorfileView extends StatelessWidget {
             ),
           ),
           Button(title: 'Subscribe Now'),
-
+          SizedBox(height: 30),
           GestureDetector(
             child: ProfileHelp(
               icon: Icons.notifications_active_outlined,
               text: 'Notification',
             ),
           ),
+          SizedBox(height: 30),
           GestureDetector(
             onTap: () {},
             child: ProfileHelp(
@@ -50,15 +53,25 @@ class PorfileView extends StatelessWidget {
               text: 'Privacy Policy',
             ),
           ),
+          SizedBox(height: 30),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Get.to(ForgetPassword());
+            },
             child: ProfileHelp(
               icon: Icons.lock_outline_sharp,
               text: 'Forgot Password',
             ),
           ),
+          SizedBox(height: 30),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Get.snackbar(
+                snackPosition: SnackPosition.BOTTOM,
+                'Logged Out',
+                'You have been logged out successfully',
+              );
+            },
             child: Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Row(
