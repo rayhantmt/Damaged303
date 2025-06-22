@@ -1,8 +1,10 @@
 import 'package:damaged303/app/common_widgets/button.dart';
+import 'package:damaged303/app/common_widgets/privacy_policy.dart';
 import 'package:damaged303/app/common_widgets/profile_helper_text.dart';
 import 'package:damaged303/app/modules/foret_password/forget_password_view.dart';
 import 'package:damaged303/app/modules/log_in/log_in_view.dart';
 import 'package:damaged303/app/modules/notifications/notifications_view.dart';
+import 'package:damaged303/app/modules/subscription_screen/subscription_view.dart';
 import 'package:damaged303/app/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -39,7 +41,12 @@ class PorfileView extends StatelessWidget {
               color: Color(0xFF7D848D),
             ),
           ),
-          Button(title: 'Subscribe Now'),
+          GestureDetector(
+            onTap: () {
+              Get.to(Subscription());
+            },
+            child: Button(title: 'Subscribe Now'),
+          ),
           SizedBox(height: 30),
           GestureDetector(
             onTap: () {
@@ -52,7 +59,9 @@ class PorfileView extends StatelessWidget {
           ),
           SizedBox(height: 30),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Get.to(PrivacyPolicy());
+            },
             child: ProfileHelp(
               icon: Icons.insert_drive_file_outlined,
               text: 'Privacy Policy',
