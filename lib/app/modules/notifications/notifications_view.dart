@@ -1,3 +1,4 @@
+import 'package:damaged303/app/common_widgets/notification_helper.dart';
 import 'package:flutter/material.dart';
 
 class NotificationsView extends StatelessWidget {
@@ -7,6 +8,7 @@ class NotificationsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
           'Notification',
           style: TextStyle(
@@ -16,6 +18,7 @@ class NotificationsView extends StatelessWidget {
           ),
         ),
       ),
+      body: Column(children: [NotificationHelper()]),
     );
   }
 }
