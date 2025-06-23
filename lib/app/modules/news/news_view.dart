@@ -46,6 +46,7 @@ class NewsView extends StatelessWidget {
               child: Container(
                 child: TextFormField(
                   decoration: InputDecoration(
+                    border: InputBorder.none,
                     icon: Icon(Icons.search),
                     hintText: 'Search News',
                   ),
@@ -67,6 +68,7 @@ class NewsView extends StatelessWidget {
                   child: Container(
                     child: TextFormField(
                       decoration: InputDecoration(
+                        border: InputBorder.none,
                         hintText: 'Select a category',
                       ),
                     ),
