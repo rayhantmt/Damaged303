@@ -47,7 +47,7 @@ class NewsDetailsView extends StatelessWidget {
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 16,
-                        color: Color(0xFF050505),
+                        color: Color(0xFFFFFFFF),
                       ),
                     ),
                   ),
@@ -98,14 +98,14 @@ class NewsDetailsView extends StatelessWidget {
                   onTap: () {},
                   child: Container(
                     height: 40,
-                    width: 115,
+                    width: 209,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       color: AppColors.primarycolor,
                     ),
                     child: Center(
                       child: Text(
-                        'Read more',
+                        'Link to the original content',
                         style: TextStyle(
                           color: Color(0xFFE6E6E6),
                           fontWeight: FontWeight.w500,
