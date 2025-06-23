@@ -1,3 +1,4 @@
+import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class NotificationHelper extends StatelessWidget {
@@ -17,8 +18,7 @@ class NotificationHelper extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 20, right: 20),
       child: Row(
-        crossAxisAlignment:
-            CrossAxisAlignment.center, // Changed from start to center
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Expanded(
             child: Column(
@@ -35,7 +35,21 @@ class NotificationHelper extends StatelessWidget {
           ),
           SizedBox(width: 8),
 
-          Text(notification_count),
+          Container(
+            height: 26,
+            width: 26,
+            decoration: BoxDecoration(
+              color: AppColors.primarycolor,
+              borderRadius: BorderRadius.circular(100),
+            ),
+
+            child: Center(
+              child: Text(
+                notification_count,
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ),
         ],
       ),
     );
