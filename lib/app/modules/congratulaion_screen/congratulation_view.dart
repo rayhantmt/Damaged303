@@ -14,7 +14,6 @@ class CongratulationView extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
-        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(height: Get.height * .1),

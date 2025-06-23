@@ -3,7 +3,7 @@ import 'package:damaged303/app/common_widgets/text_field.dart';
 import 'package:damaged303/app/modules/foret_password/forget_password_view.dart';
 
 import 'package:damaged303/app/modules/log_in/log_in_controller.dart';
-import 'package:damaged303/app/modules/main_screen/main_screen_view.dart';
+
 import 'package:damaged303/app/modules/sign_up/sign_up_view.dart';
 import 'package:damaged303/app/modules/subscription_screen/subscription_view.dart';
 import 'package:damaged303/app/utils/app_colors.dart';
