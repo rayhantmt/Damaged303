@@ -138,7 +138,12 @@ class HomeView extends StatelessWidget {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      Get.to(CahtView());
+                      Get.to(
+                        CahtView(
+                          chat_imng: AppImages.home1,
+                          chat_name: 'Talent Acquisition',
+                        ),
+                      );
                     },
                     child: HomeStack(
                       tittle: 'Talent Acquisition',
@@ -148,7 +153,12 @@ class HomeView extends StatelessWidget {
 
                   GestureDetector(
                     onTap: () {
-                      Get.to(CahtView());
+                      Get.to(
+                        CahtView(
+                          chat_imng: AppImages.home2,
+                          chat_name: 'HR Business\n      Partner',
+                        ),
+                      );
                     },
                     child: HomeStack(
                       tittle: 'HR Business\n      Partner',
@@ -158,7 +168,12 @@ class HomeView extends StatelessWidget {
 
                   GestureDetector(
                     onTap: () {
-                      Get.to(CahtView());
+                      Get.to(
+                        CahtView(
+                          chat_imng: AppImages.home3,
+                          chat_name: 'Compensation',
+                        ),
+                      );
                     },
                     child: HomeStack(
                       tittle: 'Compensation',
@@ -168,7 +183,12 @@ class HomeView extends StatelessWidget {
 
                   GestureDetector(
                     onTap: () {
-                      Get.to(CahtView());
+                      Get.to(
+                        CahtView(
+                          chat_name: 'Compliance',
+                          chat_imng: AppImages.home4,
+                        ),
+                      );
                     },
                     child: HomeStack(
                       tittle: 'Compliance',
@@ -178,7 +198,12 @@ class HomeView extends StatelessWidget {
 
                   GestureDetector(
                     onTap: () {
-                      Get.to(CahtView());
+                      Get.to(
+                        CahtView(
+                          chat_imng: AppImages.home5,
+                          chat_name: '   Learning &\n Development',
+                        ),
+                      );
                     },
                     child: HomeStack(
                       tittle: '   Learning &\n Development',
@@ -188,7 +213,12 @@ class HomeView extends StatelessWidget {
 
                   GestureDetector(
                     onTap: () {
-                      Get.to(CahtView());
+                      Get.to(
+                        CahtView(
+                          chat_name: 'Organizational\n Development',
+                          chat_imng: AppImages.home6,
+                        ),
+                      );
                     },
                     child: HomeStack(
                       tittle: 'Organizational\n Development',
@@ -198,7 +228,12 @@ class HomeView extends StatelessWidget {
 
                   GestureDetector(
                     onTap: () {
-                      Get.to(CahtView());
+                      Get.to(
+                        CahtView(
+                          chat_name: 'Total Rewards',
+                          chat_imng: AppImages.home7,
+                        ),
+                      );
                     },
                     child: HomeStack(
                       tittle: 'Total Rewards',
@@ -208,7 +243,12 @@ class HomeView extends StatelessWidget {
 
                   GestureDetector(
                     onTap: () {
-                      Get.to(CahtView());
+                      Get.to(
+                        CahtView(
+                          chat_imng: AppImages.home8,
+                          chat_name: 'HR Strategy',
+                        ),
+                      );
                     },
                     child: HomeStack(
                       tittle: 'HR Strategy',

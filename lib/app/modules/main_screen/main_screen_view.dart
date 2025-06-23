@@ -4,6 +4,7 @@ import 'package:damaged303/app/modules/main_screen/main_screen_controller.dart';
 import 'package:damaged303/app/modules/news/news_view.dart';
 import 'package:damaged303/app/modules/profile/porfile_view.dart';
 import 'package:damaged303/app/utils/app_colors.dart';
+import 'package:damaged303/app/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,7 +13,7 @@ class MainScreen extends StatelessWidget {
 
   final List<Widget> screens = [
     HomeView(),
-    CahtView(),
+    CahtView(chat_name: 'Talent Acquisition', chat_imng: AppImages.home1),
     NewsView(),
     PorfileView(),
   ];
