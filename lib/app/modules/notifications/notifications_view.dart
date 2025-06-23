@@ -18,7 +18,16 @@ class NotificationsView extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(children: [NotificationHelper()]),
+      body: Column(
+        children: [
+          NotificationHelper(
+            name: 'Jacob Davis',
+            notification_time: "12:44 PM",
+            hint_notification: "Hi there! I'd love to help you with....",
+            notification_count: '3',
+          ),
+        ],
+      ),
     );
   }
 }
