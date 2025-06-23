@@ -60,7 +60,14 @@ class _PaymentViewState extends State<PaymentView> {
                   //crossAxisAlignment: CrossAxisAlignment.stretch,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Expanded(child: TextFormField()),
+                    Expanded(
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: '0000 0000 0000',
+                        ),
+                      ),
+                    ),
                     Row(
                       children: [
                         Image.asset(AppImages.visa),
@@ -82,10 +89,11 @@ class _PaymentViewState extends State<PaymentView> {
                     child: Container(
                       child: TextFormField(
                         decoration: InputDecoration(
+                          border: InputBorder.none,
                           hint: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text('MM // YYYY'),
+                              Text('  MM / YYYY'),
                               Icon(Icons.calendar_month_outlined),
                             ],
                           ),
@@ -103,6 +111,7 @@ class _PaymentViewState extends State<PaymentView> {
                     child: Container(
                       child: TextFormField(
                         decoration: InputDecoration(
+                          border: InputBorder.none,
                           hint: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -158,7 +167,10 @@ class _PaymentViewState extends State<PaymentView> {
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Container(
                 child: TextFormField(
-                  decoration: InputDecoration(hintText: 'Indonesia'),
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: 'Indonesia',
+                  ),
                 ),
                 height: 45,
                 decoration: BoxDecoration(
@@ -172,7 +184,10 @@ class _PaymentViewState extends State<PaymentView> {
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Container(
                 child: TextFormField(
-                  decoration: InputDecoration(hintText: 'Postal code'),
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: 'Postal code',
+                  ),
                 ),
                 height: 45,
                 decoration: BoxDecoration(
@@ -203,7 +218,10 @@ class _PaymentViewState extends State<PaymentView> {
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Container(
                 child: TextFormField(
-                  decoration: InputDecoration(hintText: 'New_Member'),
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: 'New_Member',
+                  ),
 
                   //controller creation left
                 ),
