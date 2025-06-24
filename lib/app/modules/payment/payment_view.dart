@@ -94,7 +94,13 @@ class _PaymentViewState extends State<PaymentView> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text('  MM / YYYY'),
-                              Icon(Icons.calendar_month_outlined),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  left: 10,
+                                  right: 10,
+                                ),
+                                child: Icon(Icons.calendar_month_outlined),
+                              ),
                             ],
                           ),
                         ),
@@ -115,8 +121,14 @@ class _PaymentViewState extends State<PaymentView> {
                           hint: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text('CVC'),
-                              Icon(Icons.verified_user_outlined),
+                              Text(' CVC'),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  left: 10,
+                                  right: 10,
+                                ),
+                                child: Icon(Icons.verified_user_outlined),
+                              ),
                             ],
                           ),
                         ),
