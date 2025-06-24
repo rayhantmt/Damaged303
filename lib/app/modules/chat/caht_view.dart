@@ -48,6 +48,46 @@ class CahtView extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                 ),
               ),
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Center(child: Text('Messeges')),
+                ),
+              ),
+
+              Container(
+                height: 50,
+                width: double.infinity,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          hintText: '   Type a message...',
+                          border: InputBorder.none,
+                        ),
+                      ),
+                      width: Get.width * .70,
+
+                      decoration: BoxDecoration(
+                        border: Border.all(width: 1, color: Color(0xffDDDDDF)),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    Icon(Icons.mic),
+                    IconButton.filled(
+                      style: IconButton.styleFrom(
+                        backgroundColor: AppColors.primarycolor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                      onPressed: () {},
+                      icon: Icon(Icons.send_outlined),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
