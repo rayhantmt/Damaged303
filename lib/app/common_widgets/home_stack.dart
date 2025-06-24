@@ -18,7 +18,7 @@ class HomeStack extends StatelessWidget {
           Padding(
             padding: EdgeInsets.all(8),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(12),
