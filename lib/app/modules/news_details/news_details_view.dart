@@ -107,7 +107,7 @@ class NewsDetailsView extends StatelessWidget {
                   onTap: () {},
                   child: Container(
                     height: 40,
-                    width: 209,
+                    width: 239,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       color: AppColors.primarycolor,

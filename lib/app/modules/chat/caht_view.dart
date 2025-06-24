@@ -1,5 +1,6 @@
 import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CahtView extends StatelessWidget {
   const CahtView({super.key, this.chat_name, this.chat_imng});
@@ -14,8 +15,29 @@ class CahtView extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                child: Row(children: [
-                    
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Get.back();
+                      },
+                      child: Icon(Icons.arrow_back_ios_new),
+                    ),
+                    Container(
+                      height: 42,
+                      width: 42,
+                      child: Image.asset(chat_imng ?? ""),
+                    ),
+                    Text(
+                      chat_name ?? "",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 24,
+                        color: Color(0xff050505),
+                      ),
+                    ),
+                    Icon(Icons.more_vert_rounded),
                   ],
                 ),
                 height: 68,
