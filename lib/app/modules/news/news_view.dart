@@ -114,7 +114,7 @@ class NewsView extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(width: 2),
+                          SizedBox(width: 8),
                           Container(
                             height: 40,
                             width: Get.width * .25,

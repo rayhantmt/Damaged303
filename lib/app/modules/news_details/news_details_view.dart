@@ -31,7 +31,16 @@ class NewsDetailsView extends StatelessWidget {
         padding: const EdgeInsets.only(left: 20, right: 20),
         child: Column(
           children: [
-            SizedBox(height: 20),
+            SizedBox(height: 10),
+            Text(
+              ' Summarized by AI',
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 22,
+                color: Color(0xff1B1E28),
+              ),
+            ),
+            SizedBox(height: 10),
             Row(
               children: [
                 Container(
@@ -52,7 +61,7 @@ class NewsDetailsView extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(width: 2),
+                SizedBox(width: 8),
                 Container(
                   height: 40,
                   width: Get.width * .25,

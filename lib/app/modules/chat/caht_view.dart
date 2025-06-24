@@ -14,6 +14,10 @@ class CahtView extends StatelessWidget {
           child: Column(
             children: [
               Container(
+                child: Row(children: [
+                    
+                  ],
+                ),
                 height: 68,
                 width: double.infinity,
                 decoration: BoxDecoration(
