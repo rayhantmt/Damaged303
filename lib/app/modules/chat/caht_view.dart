@@ -1,3 +1,4 @@
+import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CahtView extends StatelessWidget {
@@ -7,13 +8,23 @@ class CahtView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(chat_name ?? ''), centerTitle: true),
-      body: Column(
-        children: [
-          SingleChildScrollView(
-            child: Center(child: Image.asset(chat_imng ?? "")),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.only(left: 20, right: 20),
+          child: Column(
+            children: [
+              Container(
+                height: 68,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Color(0xffE6ECEB),
+                  border: Border.all(width: 1, color: AppColors.primarycolor),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
