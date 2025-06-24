@@ -69,7 +69,7 @@ class NewsView extends StatelessWidget {
                     child: TextFormField(
                       decoration: InputDecoration(
                         border: InputBorder.none,
-                        hintText: 'Select a category',
+                        hintText: '   Select a category',
                       ),
                     ),
                     height: 45,
