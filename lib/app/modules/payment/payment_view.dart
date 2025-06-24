@@ -64,7 +64,7 @@ class _PaymentViewState extends State<PaymentView> {
                       child: TextFormField(
                         decoration: InputDecoration(
                           border: InputBorder.none,
-                          hintText: '0000 0000 0000',
+                          hintText: '  0000 0000 0000',
                         ),
                       ),
                     ),
@@ -181,7 +181,7 @@ class _PaymentViewState extends State<PaymentView> {
                 child: TextFormField(
                   decoration: InputDecoration(
                     border: InputBorder.none,
-                    hintText: 'Indonesia',
+                    hintText: '  Indonesia',
                   ),
                 ),
                 height: 45,
@@ -198,7 +198,7 @@ class _PaymentViewState extends State<PaymentView> {
                 child: TextFormField(
                   decoration: InputDecoration(
                     border: InputBorder.none,
-                    hintText: 'Postal code',
+                    hintText: '  Postal code',
                   ),
                 ),
                 height: 45,
@@ -232,7 +232,7 @@ class _PaymentViewState extends State<PaymentView> {
                 child: TextFormField(
                   decoration: InputDecoration(
                     border: InputBorder.none,
-                    hintText: 'New_Member',
+                    hintText: '  New_Member',
                   ),
 
                   //controller creation left
