@@ -17,7 +17,7 @@ class CongratulationView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(height: Get.height * .1),
-          Image.asset(AppImages.congratulations),
+          Image.asset(AppImages.coffee),
           Text(
             'Congratulations',
             style: TextStyle(
@@ -28,7 +28,7 @@ class CongratulationView extends StatelessWidget {
           ),
           SizedBox(height: Get.height * .05),
           CongratulaionsText(),
-          SizedBox(height: Get.height * .25),
+          SizedBox(height: Get.height * .2),
           GestureDetector(
             onTap: () {
               Get.offAll(MainScreen());

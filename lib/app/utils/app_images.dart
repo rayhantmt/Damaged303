@@ -16,4 +16,5 @@ class AppImages {
   static const String american_express = 'assets/images/american_express.png';
   static const String apple_pay = 'assets/images/apple_pay.png';
   static const String congratulations = 'assets/images/congratulations.png';
+  static const String coffee = 'assets/images/coffe.png';
 }
