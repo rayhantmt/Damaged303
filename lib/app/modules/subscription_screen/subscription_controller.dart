@@ -1,9 +1,9 @@
-import 'package:get/get.dart';
+// import 'package:get/get.dart';
 
-class SubscriptionViewModel extends GetxController {
-  final selectedIndex = 0.obs;
+// class SubscriptionViewModel extends GetxController {
+//   final selectedIndex = 0.obs;
 
-  void selectOption(int index) {
-    selectedIndex.value = index;
-  }
-}
+//   void selectOption(int index) {
+//     selectedIndex.value = index;
+//   }
+// }
