@@ -1,7 +1,10 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:damaged303/app/modules/chat/chat_controller.dart';
 import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+final AudioPlayer audioPlayer = AudioPlayer();
 
 class CahtView extends StatelessWidget {
   final TextEditingController textController = TextEditingController();
@@ -82,12 +85,39 @@ class CahtView extends StatelessWidget {
                                 : Color(0xffE6ECEB),
                             borderRadius: BorderRadius.circular(8),
                           ),
-                          child: Text(
-                            msg.text,
-                            style: TextStyle(
-                              color: msg.isMe ? Colors.white : Colors.black,
-                            ),
-                          ),
+                          child: msg.audioPath != null
+                              ? Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    IconButton(
+                                      icon: Icon(
+                                        Icons.play_arrow,
+                                        color: Colors.white,
+                                      ),
+                                      onPressed: () async {
+                                        await audioPlayer.play(
+                                          DeviceFileSource(msg.audioPath!),
+                                        );
+                                      },
+                                    ),
+                                    Text(
+                                      'Voice message',
+                                      style: TextStyle(
+                                        color: msg.isMe
+                                            ? Colors.white
+                                            : Colors.black,
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              : Text(
+                                  msg.text,
+                                  style: TextStyle(
+                                    color: msg.isMe
+                                        ? Colors.white
+                                        : Colors.black,
+                                  ),
+                                ),
                         ),
                       );
                     },

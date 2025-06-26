@@ -1,5 +1,5 @@
 import 'package:damaged303/app/common_widgets/premium_basic_text.dart';
-import 'package:damaged303/app/utils/app_colors.dart';
+
 import 'package:flutter/material.dart';
 
 class CongratulaionsText extends StatelessWidget {

@@ -2,8 +2,14 @@ class ChatMessage {
   final String text;
   final bool isMe;
   final DateTime time;
+  final String? audioPath; // Add this for voice messages
 
-  ChatMessage({required this.text, required this.isMe, required this.time});
+  ChatMessage({
+    required this.text,
+    required this.isMe,
+    required this.time,
+    this.audioPath,
+  });
 }
 
 final List<ChatMessage> dummyMessages = [

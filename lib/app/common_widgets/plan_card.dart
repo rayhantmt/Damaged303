@@ -1,4 +1,4 @@
-import 'package:damaged303/app/modules/subscription_screen/subscription_controller.dart';
+/*import 'package:damaged303/app/modules/subscription_screen/subscription_controller.dart';
 import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -36,11 +36,9 @@ class PlanOptionCard extends StatelessWidget {
                 margin: const EdgeInsets.only(top: 12, bottom: 12),
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: isSelected ? Color(0xFFB0C3C2) : Colors.white,
+                  color: isSelected ? Colors.white : AppColors.primarycolor,
                   border: Border.all(
-                    color: isSelected
-                        ? AppColors.primarycolor
-                        : Color(0xFFB0C3C2),
+                    color: isSelected ? Colors.white : AppColors.primarycolor,
                     width: 2,
                   ),
                   borderRadius: BorderRadius.circular(12),
@@ -90,12 +88,12 @@ class PlanOptionCard extends StatelessWidget {
                       vertical: 4,
                     ),
                     decoration: BoxDecoration(
-                      color: Colors.teal.shade800,
+                      color: Colors.white,
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: const Text(
                       'Most Popular',
-                      style: TextStyle(color: Colors.white, fontSize: 12),
+                      style: TextStyle(color: Colors.green, fontSize: 12),
                     ),
                   ),
                 ),
@@ -105,4 +103,4 @@ class PlanOptionCard extends StatelessWidget {
       }),
     );
   }
-}
+}*/

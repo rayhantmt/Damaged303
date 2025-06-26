@@ -50,9 +50,14 @@ class VoiceController extends GetxController {
     if (path != null) {
       lastRecordedFile = path;
       print("Recorded file path: $path");
-      // Add a message to the chat when recording is stopped
+      // Add a message to the chat when recording is stopped, with audioPath
       messages.add(
-        ChatMessage(text: '[Voice message]', isMe: true, time: DateTime.now()),
+        ChatMessage(
+          text: '[Voice message]',
+          isMe: true,
+          time: DateTime.now(),
+          audioPath: path, // Store the audio file path
+        ),
       );
     }
   }

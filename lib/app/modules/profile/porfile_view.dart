@@ -1,10 +1,11 @@
 import 'package:damaged303/app/common_widgets/button.dart';
 import 'package:damaged303/app/common_widgets/privacy_policy.dart';
 import 'package:damaged303/app/common_widgets/profile_helper_text.dart';
+import 'package:damaged303/app/modules/changed_subscription/changed_subscription_view.dart';
 import 'package:damaged303/app/modules/foret_password/forget_password_view.dart';
 import 'package:damaged303/app/modules/log_in/log_in_view.dart';
 import 'package:damaged303/app/modules/notifications/notifications_view.dart';
-import 'package:damaged303/app/modules/subscription_screen/subscription_view.dart';
+
 import 'package:damaged303/app/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
