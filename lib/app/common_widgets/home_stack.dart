@@ -22,7 +22,7 @@ class HomeStack extends StatelessWidget {
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(12),
-                  child: Image.asset(img, fit: BoxFit.contain),
+                  child: Image.asset(img, fit: BoxFit.cover),
                 ),
                 //SizedBox(height: 5),
                 Text(

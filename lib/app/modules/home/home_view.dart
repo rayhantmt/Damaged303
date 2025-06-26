@@ -18,7 +18,7 @@ class HomeView extends StatelessWidget {
           child: CircleAvatar(backgroundImage: AssetImage(AppImages.google)),
         ),
         title: const Text(
-          'HR Connect',
+          'HRlynx Home',
           style: TextStyle(
             fontWeight: FontWeight.w500,
             fontSize: 24,
@@ -68,7 +68,7 @@ class HomeView extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Breaking News',
+                              'Breaking HR News',
                               style: TextStyle(
                                 fontWeight: FontWeight.w500,
                                 fontSize: 24,
@@ -77,7 +77,7 @@ class HomeView extends StatelessWidget {
                             ),
                             SizedBox(height: 20),
                             Text(
-                              'Company-wide policy update: New flexible guidelines released.',
+                              'Stay updated with the latest HR insights, trends and policy changes.',
                               style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 16,
@@ -118,14 +118,14 @@ class HomeView extends StatelessWidget {
               ),
               SizedBox(height: 20),
               Text(
-                'AI HR Conversation Start',
+                'Start a conversation with an AI HR Assistant:',
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: 24,
                   color: AppColors.primarycolor,
                 ),
               ),
-
+              SizedBox(height: 10),
               GridView(
                 shrinkWrap: true,
                 physics: NeverScrollableScrollPhysics(),

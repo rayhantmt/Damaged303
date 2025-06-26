@@ -44,6 +44,7 @@ class NewsView extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Container(
+                //margin: EdgeInsets.only(left: 5),
                 child: TextFormField(
                   decoration: InputDecoration(
                     border: InputBorder.none,
@@ -66,17 +67,33 @@ class NewsView extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 20, right: 20),
                   child: Container(
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: '   Select a category',
-                      ),
-                    ),
                     height: 45,
                     width: Get.width * 0.5,
                     decoration: BoxDecoration(
                       border: Border.all(width: 1, color: Color(0xFFB0C3C2)),
                       borderRadius: BorderRadius.circular(6),
+                    ),
+                    child: DropdownButtonHideUnderline(
+                      child: DropdownButton<String>(
+                        isExpanded: true,
+                        value:
+                            null, // You can manage selected value with a state variable if needed
+                        hint: Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Text('Select a category'),
+                        ),
+                        items: NewsModel().newsCategories
+                            .map(
+                              (cat) => DropdownMenuItem<String>(
+                                value: cat.category,
+                                child: Text(cat.category),
+                              ),
+                            )
+                            .toList(),
+                        onChanged: (value) {
+                          // Handle category selection here
+                        },
+                      ),
                     ),
                   ),
                 ),
@@ -139,36 +156,58 @@ class NewsView extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: 10),
-                      Text(
-                        newsList[index].headline,
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 18,
-                          color: Color(0xFF1B1E28),
-                        ),
-                      ),
-                      SizedBox(height: 10),
-                      GestureDetector(
-                        onTap: () {
-                          Get.to(
-                            NewsDetailsView(
-                              tags: tags,
-                              headline: newsList[index].headline,
-                              description: newsList[index].description,
+                      Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(8),
+                            child: Image.asset(
+                              newsList[index].image,
+                              height: 130,
+                              width: 83,
+                              fit: BoxFit.cover,
                             ),
-                          );
-                        },
-                        child: Text(
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 3,
-                          newsList[index].description,
-                          style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 16,
-                            color: Color(0xFF7D848D),
                           ),
-                        ),
+                          SizedBox(width: 5),
+                          Expanded(
+                            child: Column(
+                              children: [
+                                Text(
+                                  newsList[index].headline,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 18,
+                                    color: Color(0xFF1B1E28),
+                                  ),
+                                ),
+                                SizedBox(height: 10),
+                                GestureDetector(
+                                  onTap: () {
+                                    Get.to(
+                                      NewsDetailsView(
+                                        tags: tags,
+                                        headline: newsList[index].headline,
+                                        description:
+                                            newsList[index].description,
+                                      ),
+                                    );
+                                  },
+                                  child: Text(
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 3,
+                                    newsList[index].description,
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 16,
+                                      color: Color(0xFF7D848D),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
+
                       SizedBox(height: 30),
                     ],
                   );
