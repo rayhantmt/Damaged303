@@ -70,6 +70,44 @@ class ThirdSplash extends StatelessWidget {
               color: Color(0xFF050505),
             ),
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 12,
+                  width: 12,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Color(0xffE6ECEB),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 12,
+                  width: 12,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Color(0xffE6ECEB),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 12,
+                  width: 12,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: AppColors.primarycolor,
+                  ),
+                ),
+              ),
+            ],
+          ),
           GestureDetector(
             onTap: () {
               Get.offAll(OnboardingView());

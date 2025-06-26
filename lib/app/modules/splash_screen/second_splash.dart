@@ -55,6 +55,44 @@ class SecondSplash extends StatelessWidget {
           SplashText(text: 'Compensation, Benefits & Rewards'),
           SplashText(text: 'People Development & Culture'),
           SizedBox(height: 30),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 12,
+                  width: 12,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Color(0xffE6ECEB),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 12,
+                  width: 12,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: AppColors.primarycolor,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 12,
+                  width: 12,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Color(0xffE6ECEB),
+                  ),
+                ),
+              ),
+            ],
+          ),
           GestureDetector(
             onTap: () {
               Get.offAll(ThirdSplash());

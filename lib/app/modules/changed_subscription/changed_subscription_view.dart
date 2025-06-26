@@ -1,3 +1,4 @@
+import 'package:damaged303/app/modules/congratulaion_screen/congratulation_view.dart';
 import 'package:damaged303/app/modules/main_screen/main_screen_view.dart';
 import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:damaged303/app/utils/app_images.dart';
@@ -51,88 +52,91 @@ class Subscription extends StatelessWidget {
               ),
             ),
             SizedBox(height: 30),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20),
-              child: Stack(
-                clipBehavior: Clip.none,
-                children: [
-                  Container(
-                    child: Row(
-                      children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Text(
-                              'Explorer Pro',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 24,
-                                color: AppColors.primarycolor,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 15),
-                              child: Text(
-                                'Save 25%- Get 3 months Free',
+            GestureDetector(
+              //,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20),
+                child: Stack(
+                  clipBehavior: Clip.none,
+                  children: [
+                    Container(
+                      child: Row(
+                        children: [
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Text(
+                                'Explorer Pro',
                                 style: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 24,
                                   color: AppColors.primarycolor,
                                 ),
                               ),
-                            ),
-                          ],
-                        ),
-
-                        Text(
-                          '\$99.9/year',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 20,
-                            color: AppColors.primarycolor,
+                              Padding(
+                                padding: const EdgeInsets.only(left: 15),
+                                child: Text(
+                                  'Save 25%- Get 3 months Free',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 14,
+                                    color: AppColors.primarycolor,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                        ),
-                      ],
-                    ),
-                    height: Get.height * 0.12,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      color: Colors.white,
-                    ),
-                  ),
-                  Positioned(
-                    top: -18,
-                    left: 0,
-                    right: 0,
-                    child: Center(
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 12,
-                          vertical: 4,
-                        ),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 6,
-                              offset: Offset(0, 2),
+
+                          Text(
+                            '\$99.9/year',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 20,
+                              color: AppColors.primarycolor,
                             ),
-                          ],
-                        ),
-                        child: const Text(
-                          'Most Popular',
-                          style: TextStyle(
-                            color: AppColors.primarycolor,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w600,
+                          ),
+                        ],
+                      ),
+                      height: Get.height * 0.12,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: Colors.white,
+                      ),
+                    ),
+                    Positioned(
+                      top: -18,
+                      left: 0,
+                      right: 0,
+                      child: Center(
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 4,
+                          ),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 6,
+                                offset: Offset(0, 2),
+                              ),
+                            ],
+                          ),
+                          child: const Text(
+                            'Most Popular',
+                            style: TextStyle(
+                              color: AppColors.primarycolor,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
             SizedBox(height: 20),
@@ -218,7 +222,7 @@ class Subscription extends StatelessWidget {
             SizedBox(height: 20),
             GestureDetector(
               onTap: () {
-                Get.to(MainScreen());
+                Get.to(CongratulationView());
               },
               child: Text(
                 'Skip trial,Continue with limited free access.',

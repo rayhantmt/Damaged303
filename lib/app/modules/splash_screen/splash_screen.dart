@@ -1,5 +1,6 @@
 import 'package:damaged303/app/common_widgets/button.dart';
 import 'package:damaged303/app/modules/splash_screen/second_splash.dart';
+import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:damaged303/app/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -34,6 +35,44 @@ class SplashScreen extends StatelessWidget {
             ),
           ),
           SizedBox(height: Get.height * 0.3),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 12,
+                  width: 12,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: AppColors.primarycolor,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 12,
+                  width: 12,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Color(0xffE6ECEB),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 12,
+                  width: 12,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Color(0xffE6ECEB),
+                  ),
+                ),
+              ),
+            ],
+          ),
           GestureDetector(
             onTap: () {
               Get.offAll(SecondSplash());

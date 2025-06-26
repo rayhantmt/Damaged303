@@ -31,7 +31,7 @@ class SignUp extends StatelessWidget {
           children: [
             SizedBox(height: 90),
             Text(
-              'Sign up now',
+              'Sign up',
               style: TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 26,

@@ -28,7 +28,7 @@ class LogInView extends StatelessWidget {
           children: [
             SizedBox(height: 90),
             Text(
-              'Log in now',
+              'Log in',
               style: TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 26,
