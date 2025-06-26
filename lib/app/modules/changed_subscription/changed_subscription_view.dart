@@ -1,3 +1,4 @@
+import 'package:damaged303/app/modules/main_screen/main_screen_view.dart';
 import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:damaged303/app/utils/app_images.dart';
 import 'package:flutter/material.dart';
@@ -100,7 +101,7 @@ class Subscription extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    top: -18, // Shift upward to look like a popup
+                    top: -18,
                     left: 0,
                     right: 0,
                     child: Center(
@@ -132,6 +133,113 @@ class Subscription extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+            ),
+            SizedBox(height: 20),
+            Padding(
+              padding: const EdgeInsets.only(left: 20, right: 20),
+              child: Container(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: Text(
+                        'Explorer pro',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 24,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      '                                        \$9.99/month',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 20,
+                        color: Colors.white,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 20),
+                      child: Text(
+                        'Less than a daily latte.A lot more satisfying',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                height: Get.height * 0.12,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  border: Border.all(width: 1, color: Colors.white),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+            ),
+            SizedBox(height: 20),
+            Padding(
+              padding: EdgeInsets.only(left: 20, right: 20),
+              child: Container(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text(
+                      'Start Free Trial',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 24,
+                        color: AppColors.primarycolor,
+                      ),
+                    ),
+                    Text(
+                      'No Commitment. cancel anytime during trial Period.',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 12,
+                        color: AppColors.primarycolor,
+                      ),
+                    ),
+                  ],
+                ),
+                height: Get.height * .12,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            SizedBox(height: 20),
+            GestureDetector(
+              onTap: () {
+                Get.to(MainScreen());
+              },
+              child: Text(
+                'Skip trial,Continue with limited free access.',
+                style: TextStyle(
+                  decoration: TextDecoration.underline,
+                  decorationColor: Colors.white,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 12,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            SizedBox(height: 40),
+            Text(
+              'Terms and Privacy Policy',
+              style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 16,
+                color: Colors.white,
+                decoration: TextDecoration.underline,
+                decorationColor: Colors.white,
               ),
             ),
           ],
