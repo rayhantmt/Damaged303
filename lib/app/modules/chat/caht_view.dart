@@ -1,13 +1,18 @@
+import 'package:damaged303/app/modules/chat/chat_controller.dart';
 import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CahtView extends StatelessWidget {
-  const CahtView({super.key, this.chat_name, this.chat_imng});
+  final TextEditingController textController = TextEditingController();
+  CahtView({super.key, this.chat_name, this.chat_imng});
   final String? chat_name;
   final String? chat_imng;
+
   @override
   Widget build(BuildContext context) {
+    final VoiceController voiceController = Get.put(VoiceController());
+
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -48,9 +53,45 @@ class CahtView extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                 ),
               ),
+
               Expanded(
-                child: SingleChildScrollView(
-                  child: Center(child: Text('Messeges')),
+                child: Obx(
+                  () => ListView.builder(
+                    itemCount: voiceController.messages.length,
+                    reverse: true,
+                    itemBuilder: (context, index) {
+                      final msg =
+                          voiceController.messages[voiceController
+                                  .messages
+                                  .length -
+                              1 -
+                              index];
+                      return Align(
+                        alignment: msg.isMe
+                            ? Alignment.centerRight
+                            : Alignment.centerLeft,
+                        child: Container(
+                          margin: EdgeInsets.symmetric(vertical: 4),
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 8,
+                          ),
+                          decoration: BoxDecoration(
+                            color: msg.isMe
+                                ? AppColors.primarycolor
+                                : Color(0xffE6ECEB),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Text(
+                            msg.text,
+                            style: TextStyle(
+                              color: msg.isMe ? Colors.white : Colors.black,
+                            ),
+                          ),
+                        ),
+                      );
+                    },
+                  ),
                 ),
               ),
 
@@ -62,19 +103,45 @@ class CahtView extends StatelessWidget {
                   children: [
                     Container(
                       child: TextFormField(
+                        controller: textController,
                         decoration: InputDecoration(
                           hintText: '   Type a message...',
                           border: InputBorder.none,
                         ),
+                        onFieldSubmitted: (value) {
+                          voiceController.sendTextMessage(value);
+                          textController.clear();
+                        },
                       ),
-                      width: Get.width * .70,
-
+                      width: Get.width * .50,
                       decoration: BoxDecoration(
                         border: Border.all(width: 1, color: Color(0xffDDDDDF)),
                         borderRadius: BorderRadius.circular(12),
                       ),
                     ),
-                    Icon(Icons.mic),
+
+                    Obx(
+                      () => GestureDetector(
+                        onLongPress: () => voiceController.startRecording(),
+                        onLongPressUp: () => voiceController.stopRecording(),
+                        onLongPressCancel: () =>
+                            voiceController.cancelRecording(),
+                        child: CircleAvatar(
+                          backgroundColor: voiceController.isRecording.value
+                              ? Colors.red
+                              : Colors.grey.shade600,
+                          radius: 20,
+                          child: Icon(
+                            voiceController.isRecording.value
+                                ? Icons.mic_none
+                                : Icons.mic,
+                            color: Colors.white,
+                            size: 20,
+                          ),
+                        ),
+                      ),
+                    ),
+
                     IconButton.filled(
                       style: IconButton.styleFrom(
                         backgroundColor: AppColors.primarycolor,
@@ -82,7 +149,10 @@ class CahtView extends StatelessWidget {
                           borderRadius: BorderRadius.circular(12),
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        voiceController.sendTextMessage(textController.text);
+                        textController.clear();
+                      },
                       icon: Icon(Icons.send_outlined),
                     ),
                   ],
