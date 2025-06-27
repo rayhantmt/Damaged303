@@ -1,5 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:damaged303/app/modules/chat/chat_controller.dart';
+import 'package:damaged303/app/modules/chat_history/chat_history.dart';
 import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -61,19 +62,24 @@ class CahtView extends StatelessWidget {
                 SizedBox(height: 10),
                 Padding(
                   padding: const EdgeInsets.only(left: 20),
-                  child: Row(
-                    children: [
-                      Icon(Icons.access_time_outlined, color: Colors.white),
-                      SizedBox(width: 3),
-                      Text(
-                        'History',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          color: Colors.white,
-                          fontSize: 16,
+                  child: GestureDetector(
+                    onTap: () {
+                      Get.to(ChatHistory());
+                    },
+                    child: Row(
+                      children: [
+                        Icon(Icons.access_time_outlined, color: Colors.white),
+                        SizedBox(width: 3),
+                        Text(
+                          'History',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,
+                            fontSize: 16,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ],
