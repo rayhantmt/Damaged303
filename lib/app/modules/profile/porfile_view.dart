@@ -5,6 +5,8 @@ import 'package:damaged303/app/modules/changed_subscription/changed_subscription
 import 'package:damaged303/app/modules/foret_password/forget_password_view.dart';
 import 'package:damaged303/app/modules/log_in/log_in_view.dart';
 import 'package:damaged303/app/modules/notifications/notifications_view.dart';
+import 'package:damaged303/app/modules/terms_of_use/terms_of_use.dart';
+import 'package:damaged303/app/modules/update_password/update_password.dart';
 
 import 'package:damaged303/app/utils/app_images.dart';
 import 'package:flutter/material.dart';
@@ -71,11 +73,21 @@ class PorfileView extends StatelessWidget {
           SizedBox(height: 30),
           GestureDetector(
             onTap: () {
-              Get.to(ForgetPassword());
+              Get.to(TermsOfUse());
+            },
+            child: ProfileHelp(
+              icon: Icons.insert_drive_file_outlined,
+              text: 'Terms of Use',
+            ),
+          ),
+          SizedBox(height: 30),
+          GestureDetector(
+            onTap: () {
+              Get.to(UpdatePassword());
             },
             child: ProfileHelp(
               icon: Icons.lock_outline_sharp,
-              text: 'Forgot Password',
+              text: 'Update Password',
             ),
           ),
           SizedBox(height: 30),
