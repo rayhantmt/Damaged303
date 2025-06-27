@@ -188,6 +188,7 @@ class NewsView extends StatelessWidget {
                                         headline: newsList[index].headline,
                                         description:
                                             newsList[index].description,
+                                        img: newsList[index].image,
                                       ),
                                     );
                                   },
