@@ -1,5 +1,6 @@
 import 'package:damaged303/app/common_widgets/button.dart';
 import 'package:damaged303/app/common_widgets/text_field.dart';
+import 'package:damaged303/app/modules/forgot_password_home/forgot_password_home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -41,7 +42,7 @@ class ResetPassword extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              'The password must be different than before',
+              'The password must be different than previous',
               style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 14,
@@ -93,7 +94,7 @@ class ResetPassword extends StatelessWidget {
             ),
             SizedBox(height: 30),
             GestureDetector(
-              onTap: () => print('password reseted'),
+              onTap: () => Get.to(ForgotPasswordHome()),
               child: Button(title: 'Continue'),
             ),
           ],

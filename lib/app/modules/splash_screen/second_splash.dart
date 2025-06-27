@@ -48,7 +48,7 @@ class SecondSplash extends StatelessWidget {
           ),
           SizedBox(height: 10),
 
-          SplashText(text: 'HR Statagy & Leadership'),
+          SplashText(text: 'HR Strategy & Leadership'),
 
           SplashText(text: 'Workforce Com liance & Re ulation'),
           SplashText(text: 'Talent Acquisition & Labor Trends'),

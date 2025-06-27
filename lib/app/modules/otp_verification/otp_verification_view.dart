@@ -34,7 +34,7 @@ class OtpVerificationScreen extends StatelessWidget {
               const SizedBox(height: 10),
               Obx(
                 () => Text(
-                  'Please check your email ${otpController.email.value} to see the verification code',
+                  'Please check your email ${otpController.email.value} to find the verification code',
                   style: TextStyle(fontSize: 16, color: Colors.grey[700]),
                 ),
               ),
