@@ -17,6 +17,70 @@ class CahtView extends StatelessWidget {
     final VoiceController voiceController = Get.put(VoiceController());
 
     return Scaffold(
+      endDrawer: Drawer(
+        width: Get.width * .4,
+        child: Container(
+          color: AppColors.primarycolor,
+          child: SafeArea(
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Get.back();
+                      },
+                      child: Icon(Icons.cancel_outlined, color: Colors.white),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: GestureDetector(
+                    onTap: () {
+                      print('while backend we will implement this');
+                    },
+                    child: Row(
+                      children: [
+                        Icon(Icons.edit_note_rounded, color: Colors.white),
+                        SizedBox(width: 3),
+                        Text(
+                          'New chat',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 10),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Row(
+                    children: [
+                      Icon(Icons.access_time_outlined, color: Colors.white),
+                      SizedBox(width: 3),
+                      Text(
+                        'History',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(left: 20, right: 20),
@@ -45,7 +109,14 @@ class CahtView extends StatelessWidget {
                         color: Color(0xff050505),
                       ),
                     ),
-                    Icon(Icons.more_vert_rounded),
+                    Builder(
+                      builder: (context) => GestureDetector(
+                        onTap: () {
+                          Scaffold.of(context).openEndDrawer();
+                        },
+                        child: Icon(Icons.more_vert_rounded),
+                      ),
+                    ),
                   ],
                 ),
                 height: 68,
