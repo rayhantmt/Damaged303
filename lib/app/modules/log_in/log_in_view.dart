@@ -1,4 +1,5 @@
 import 'package:damaged303/app/common_widgets/button.dart';
+import 'package:damaged303/app/common_widgets/privacy_policy.dart';
 import 'package:damaged303/app/common_widgets/text_field.dart';
 import 'package:damaged303/app/modules/changed_subscription/changed_subscription_view.dart';
 import 'package:damaged303/app/modules/foret_password/forget_password_view.dart';
@@ -6,6 +7,7 @@ import 'package:damaged303/app/modules/foret_password/forget_password_view.dart'
 import 'package:damaged303/app/modules/log_in/log_in_controller.dart';
 
 import 'package:damaged303/app/modules/sign_up/sign_up_view.dart';
+import 'package:damaged303/app/modules/terms_of_use/terms_of_use.dart';
 
 import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:damaged303/app/utils/app_images.dart';
@@ -99,6 +101,9 @@ class LogInView extends StatelessWidget {
                   style: TextStyle(fontWeight: FontWeight.w400, fontSize: 14),
                 ),
                 GestureDetector(
+                  onTap: () {
+                    Get.to(TermsOfUse());
+                  },
                   child: Text(
                     'Tearms of Use',
                     style: TextStyle(
@@ -114,7 +119,9 @@ class LogInView extends StatelessWidget {
                   style: TextStyle(fontWeight: FontWeight.w400, fontSize: 14),
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(PrivacyPolicy());
+                  },
                   child: Text(
                     'Privacy Policy.',
                     style: TextStyle(

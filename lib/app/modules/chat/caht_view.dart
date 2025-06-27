@@ -203,6 +203,7 @@ class CahtView extends StatelessWidget {
               ),
 
               Container(
+                padding: EdgeInsets.only(bottom: 10),
                 height: 50,
                 width: double.infinity,
                 child: Row(
@@ -220,7 +221,7 @@ class CahtView extends StatelessWidget {
                           textController.clear();
                         },
                       ),
-                      width: Get.width * .50,
+                      width: Get.width * .60,
                       decoration: BoxDecoration(
                         border: Border.all(width: 1, color: Color(0xffDDDDDF)),
                         borderRadius: BorderRadius.circular(12),

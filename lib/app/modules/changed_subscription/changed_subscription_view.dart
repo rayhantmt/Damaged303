@@ -65,12 +65,15 @@ class Subscription extends StatelessWidget {
                           Column(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
-                              Text(
-                                'Explorer Pro',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 24,
-                                  color: AppColors.primarycolor,
+                              Padding(
+                                padding: const EdgeInsets.only(left: 20),
+                                child: Text(
+                                  'Explorer Pro        \$99.9/year',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 24,
+                                    color: AppColors.primarycolor,
+                                  ),
                                 ),
                               ),
                               Padding(
@@ -85,15 +88,6 @@ class Subscription extends StatelessWidget {
                                 ),
                               ),
                             ],
-                          ),
-
-                          Text(
-                            '\$99.9/year',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 20,
-                              color: AppColors.primarycolor,
-                            ),
                           ),
                         ],
                       ),
@@ -144,12 +138,13 @@ class Subscription extends StatelessWidget {
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Container(
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 20),
                       child: Text(
-                        'Explorer pro',
+                        'Explorer Pro         \$9.9/month  ',
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 24,
@@ -157,14 +152,7 @@ class Subscription extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Text(
-                      '                                        \$9.99/month',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 20,
-                        color: Colors.white,
-                      ),
-                    ),
+
                     Padding(
                       padding: EdgeInsets.only(left: 20),
                       child: Text(

@@ -32,7 +32,7 @@ class UpdatePassword extends StatelessWidget {
           children: [
             SizedBox(height: 120),
             Text(
-              'Update password',
+              'Change password',
               style: TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 26,

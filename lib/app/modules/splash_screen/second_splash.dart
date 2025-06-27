@@ -91,6 +91,17 @@ class SecondSplash extends StatelessWidget {
                   ),
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 12,
+                  width: 12,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Color(0xffE6ECEB),
+                  ),
+                ),
+              ),
             ],
           ),
           GestureDetector(

@@ -87,7 +87,7 @@ class PorfileView extends StatelessWidget {
             },
             child: ProfileHelp(
               icon: Icons.lock_outline_sharp,
-              text: 'Update Password',
+              text: 'Change Password',
             ),
           ),
           SizedBox(height: 30),
