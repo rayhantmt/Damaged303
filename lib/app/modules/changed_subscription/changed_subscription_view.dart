@@ -46,7 +46,7 @@ class Subscription extends StatelessWidget {
                       Icon(Icons.check_outlined, color: Colors.white),
                       SizedBox(width: 3),
                       Text(
-                        'Unlimited Persona access',
+                        'Unlimited AI Persona access',
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w400,
@@ -61,7 +61,7 @@ class Subscription extends StatelessWidget {
                       Icon(Icons.check_outlined, color: Colors.white),
                       SizedBox(width: 3),
                       Text(
-                        'Bookmark Favorite Prompts',
+                        'Unlimited Chat Assistance',
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w400,
@@ -76,7 +76,7 @@ class Subscription extends StatelessWidget {
                       Icon(Icons.check_outlined, color: Colors.white),
                       SizedBox(width: 3),
                       Text(
-                        'Save conversations',
+                        'Save Conversations',
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w400,
