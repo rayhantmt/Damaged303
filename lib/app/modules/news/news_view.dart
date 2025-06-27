@@ -156,57 +156,69 @@ class NewsView extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: 10),
-                      Row(
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(8),
-                            child: Image.asset(
-                              newsList[index].image,
-                              height: 130,
-                              width: 83,
-                              fit: BoxFit.cover,
+                      GestureDetector(
+                        onTap: () {
+                          Get.to(
+                            NewsDetailsView(
+                              tags: tags,
+                              headline: newsList[index].headline,
+                              description: newsList[index].description,
+                              img: newsList[index].image,
                             ),
-                          ),
-                          SizedBox(width: 5),
-                          Expanded(
-                            child: Column(
-                              children: [
-                                Text(
-                                  newsList[index].headline,
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 18,
-                                    color: Color(0xFF1B1E28),
-                                  ),
-                                ),
-                                SizedBox(height: 10),
-                                GestureDetector(
-                                  onTap: () {
-                                    Get.to(
-                                      NewsDetailsView(
-                                        tags: tags,
-                                        headline: newsList[index].headline,
-                                        description:
-                                            newsList[index].description,
-                                        img: newsList[index].image,
-                                      ),
-                                    );
-                                  },
-                                  child: Text(
-                                    overflow: TextOverflow.ellipsis,
-                                    maxLines: 3,
-                                    newsList[index].description,
+                          );
+                        },
+                        child: Row(
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(8),
+                              child: Image.asset(
+                                newsList[index].image,
+                                height: 130,
+                                width: 83,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                            SizedBox(width: 5),
+                            Expanded(
+                              child: Column(
+                                children: [
+                                  Text(
+                                    newsList[index].headline,
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 16,
-                                      color: Color(0xFF7D848D),
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 18,
+                                      color: Color(0xFF1B1E28),
                                     ),
                                   ),
-                                ),
-                              ],
+                                  SizedBox(height: 10),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Get.to(
+                                        NewsDetailsView(
+                                          tags: tags,
+                                          headline: newsList[index].headline,
+                                          description:
+                                              newsList[index].description,
+                                          img: newsList[index].image,
+                                        ),
+                                      );
+                                    },
+                                    child: Text(
+                                      overflow: TextOverflow.ellipsis,
+                                      maxLines: 3,
+                                      newsList[index].description,
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 16,
+                                        color: Color(0xFF7D848D),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
 
                       SizedBox(height: 30),
