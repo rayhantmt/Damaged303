@@ -21,10 +21,12 @@ class ForgotPasswordHome extends StatelessWidget {
               color: Color(0xff1B1E28),
             ),
           ),
+          SizedBox(height: 12),
           Padding(
             padding: const EdgeInsets.only(left: 20, right: 20),
             child: Text(
               'Your password has been successfully reset. click confirm to set a new password',
+              textAlign: TextAlign.center,
               style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 16,
@@ -32,6 +34,7 @@ class ForgotPasswordHome extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(height: 24),
           GestureDetector(
             onTap: () {
               Get.to(MainScreen());

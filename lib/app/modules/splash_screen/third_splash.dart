@@ -57,11 +57,11 @@ class ThirdSplash extends StatelessWidget {
 
           SplashText(text: 'Prepare for a difficult conversation'),
 
-          SplashText(text: "What's new in Caifonia labor law?"),
+          SplashText(text: "What's new in California labor law?"),
 
           SizedBox(height: 30),
           Text(
-            'Talore by role (HRBP, TA, etc)',
+            'Tailored by role (HRBP, TA, etc)',
             style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 16,

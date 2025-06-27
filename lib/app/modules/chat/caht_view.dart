@@ -133,7 +133,24 @@ class CahtView extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                 ),
               ),
-
+              SizedBox(height: 5),
+              GestureDetector(
+                onTap: () {
+                  Get.snackbar(
+                    "AI-powered responses are provided for informational purposes only and do not constitute legal, compliance, or professional advice. Users should consult qualified HR, legal, or compliance professionals before making employment decisions. HRlynx AI Personas are not a substitute for independent judgment or expert consultation. Content may not reflect the most current regulatory or legal developments. Use of this platform is subject to the Terms of Use and Privacy Policy.  ",
+                    "",
+                  );
+                },
+                child: Text(
+                  'AI Guidance Only — Not Legal or HR Advice. Consult professionals for critical decisions.',
+                  style: TextStyle(
+                    decoration: TextDecoration.underline,
+                    color: AppColors.primarycolor,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 10,
+                  ),
+                ),
+              ),
               Expanded(
                 child: Obx(
                   () => ListView.builder(

@@ -38,13 +38,21 @@ class SecondSplash extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20),
-          Text(
-            'Breading News on Impartent HR Topics',
-            style: TextStyle(
-              fontWeight: FontWeight.w500,
-              fontSize: 18,
-              color: Color(0xFF050505),
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Text(
+                  'Breading News on Impartent HR Topics',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 18,
+                    color: Color(0xFF050505),
+                  ),
+                ),
+              ),
+            ],
           ),
           SizedBox(height: 10),
 

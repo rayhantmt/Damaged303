@@ -220,6 +220,30 @@ class NewsView extends StatelessWidget {
                           ],
                         ),
                       ),
+                      SizedBox(height: 10),
+                      Divider(height: 1, color: Color(0xffE6ECEB)),
+                      SizedBox(height: 2),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            '2h ago',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 12,
+                              color: Color(0xff7D848D),
+                            ),
+                          ),
+                          Text(
+                            '3min',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 12,
+                              color: Color(0xff7D848D),
+                            ),
+                          ),
+                        ],
+                      ),
 
                       SizedBox(height: 30),
                     ],

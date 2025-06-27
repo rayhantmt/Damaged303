@@ -28,27 +28,64 @@ class Subscription extends StatelessWidget {
               ),
             ),
             Text(
-              'Unlimited Persona access',
+              'Start your 7-day free trial',
               style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 20,
                 color: Colors.white,
-                fontWeight: FontWeight.w400,
-                fontSize: 16,
               ),
             ),
-            Text(
-              'Bookmark Favorite Prompts',
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.w400,
-                fontSize: 16,
-              ),
-            ),
-            Text(
-              'Save conversations',
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.w400,
-                fontSize: 16,
+            SizedBox(height: 3),
+            Padding(
+              padding: const EdgeInsets.only(left: 80, right: 30),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Icon(Icons.check_outlined, color: Colors.white),
+                      SizedBox(width: 3),
+                      Text(
+                        'Unlimited Persona access',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Icon(Icons.check_outlined, color: Colors.white),
+                      SizedBox(width: 3),
+                      Text(
+                        'Bookmark Favorite Prompts',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Icon(Icons.check_outlined, color: Colors.white),
+                      SizedBox(width: 3),
+                      Text(
+                        'Save conversations',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
             SizedBox(height: 30),

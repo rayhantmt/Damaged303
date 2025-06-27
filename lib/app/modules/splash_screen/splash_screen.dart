@@ -25,7 +25,7 @@ class SplashScreen extends StatelessWidget {
               color: Color(0xFF050505),
             ),
           ),
-          SizedBox(height: 60),
+          SizedBox(height: 10),
           Text(
             'Tailored for your role.\nBuilt for your challenges',
             style: TextStyle(
