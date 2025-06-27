@@ -58,9 +58,7 @@ class ThirdSplash extends StatelessWidget {
           SplashText(text: 'Prepare for a difficult conversation'),
 
           SplashText(text: "What's new in Caifonia labor law?"),
-          SplashText(text: 'Talent Acquisition & Labor Trends'),
-          SplashText(text: 'Compensation, Benefits & Rewards'),
-          SplashText(text: 'People Development & Culture'),
+
           SizedBox(height: 30),
           Text(
             'Talore by role (HRBP, TA, etc)',

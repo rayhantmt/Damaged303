@@ -38,7 +38,7 @@ class OnboardingView extends StatelessWidget {
               child: Image.asset(AppImages.splash),
             ),
             Text(
-              'Choose your Starting \nAl Assistant Persona',
+              'Customize your experience by\n choosing an AI HR Assistant\n                  Persona!',
               style: TextStyle(
                 fontWeight: FontWeight.w500,
                 fontSize: 23,

@@ -128,7 +128,7 @@ class SignUp extends StatelessWidget {
                 GestureDetector(
                   onTap: () {},
                   child: Text(
-                    'Privacy policy.',
+                    'Privacy Policy.',
                     style: TextStyle(
                       decoration: TextDecoration.underline,
                       color: AppColors.primarycolor,

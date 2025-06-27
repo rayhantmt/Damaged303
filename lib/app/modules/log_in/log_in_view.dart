@@ -37,7 +37,7 @@ class LogInView extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              'Please sign in to continue our app',
+              'Please sign in to continue ',
               style: TextStyle(
                 fontWeight: FontWeight.w400,
                 color: Color(0xFF7D848D),
@@ -116,7 +116,7 @@ class LogInView extends StatelessWidget {
                 GestureDetector(
                   onTap: () {},
                   child: Text(
-                    'Privacy policy.',
+                    'Privacy Policy.',
                     style: TextStyle(
                       decoration: TextDecoration.underline,
                       color: AppColors.primarycolor,
