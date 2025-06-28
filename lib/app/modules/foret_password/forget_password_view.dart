@@ -60,7 +60,7 @@ class ForgetPassword extends StatelessWidget {
             SizedBox(height: 20),
             GestureDetector(
               onTap: () => Get.to(OtpVerificationScreen()),
-              child: Button(title: 'Reset Password'),
+              child: Button(title: 'Forgot Password'),
             ),
           ],
         ),

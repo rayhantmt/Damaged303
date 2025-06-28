@@ -169,7 +169,7 @@ class SignUp extends StatelessWidget {
                 ),
                 GestureDetector(
                   child: Text(
-                    'Tearms of Use',
+                    'Terms of Use',
                     style: TextStyle(
                       decoration: TextDecoration.underline,
                       color: AppColors.primarycolor,

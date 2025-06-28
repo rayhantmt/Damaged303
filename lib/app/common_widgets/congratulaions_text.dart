@@ -20,7 +20,7 @@ class CongratulaionsText extends StatelessWidget {
           ),
         ),
         SizedBox(height: 20),
-        PremiumBasicText(tittle: 'Unlimited AI Persona access'),
+        PremiumBasicText(tittle: 'Unlimited AI Persona Access'),
         SizedBox(height: 6),
         PremiumBasicText(tittle: 'Unlimited Chat Assistance'),
         SizedBox(height: 6),

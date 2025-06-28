@@ -137,7 +137,7 @@ class LogInView extends StatelessWidget {
                     Get.to(TermsOfUse());
                   },
                   child: Text(
-                    'Tearms of Use',
+                    'Terms of Use',
                     style: TextStyle(
                       decoration: TextDecoration.underline,
                       color: AppColors.primarycolor,
