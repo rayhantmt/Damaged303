@@ -25,7 +25,7 @@ class PorfileView extends StatelessWidget {
         children: [
           CircleAvatar(
             radius: 60,
-            backgroundImage: AssetImage(AppImages.home4),
+            backgroundImage: AssetImage(AppImages.profie),
           ),
 
           Text(
