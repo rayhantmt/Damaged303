@@ -28,7 +28,7 @@ class CongratulationView extends StatelessWidget {
           ),
           SizedBox(height: Get.height * .05),
           CongratulaionsText(),
-          SizedBox(height: Get.height * .2),
+          SizedBox(height: Get.height * .19),
           GestureDetector(
             onTap: () {
               Get.offAll(MainScreen());

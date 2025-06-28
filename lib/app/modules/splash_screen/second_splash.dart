@@ -44,7 +44,7 @@ class SecondSplash extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 20),
                 child: Text(
-                  'Breaking News on Important HR Topics',
+                  'Breaking News on Importa nt HR Topics',
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 18,

@@ -39,7 +39,7 @@ class HomeView extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: Get.height * 0.2,
+                height: Get.height * 0.23,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),

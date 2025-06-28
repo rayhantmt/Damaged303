@@ -8,7 +8,7 @@ class HomeStack extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 400,
+      height: 500,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         border: Border.all(width: 1, color: Color(0xFF999999)),
@@ -24,12 +24,12 @@ class HomeStack extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                   child: Image.asset(img, fit: BoxFit.cover),
                 ),
-                //SizedBox(height: 5),
+
                 Text(
                   tittle,
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
-                    fontSize: 14,
+                    fontSize: 13,
                     color: Color(0xFF050505),
                   ),
                 ),
