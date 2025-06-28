@@ -50,9 +50,25 @@ class ResetPassword extends StatelessWidget {
               ),
             ),
             SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Text(
+                    'Password',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16,
+                      color: Color(0xff050505),
+                    ),
+                  ),
+                ),
+              ],
+            ),
             Obx(
               () => CustomTextFormField(
-                hintText: 'New Password',
+                hintText: 'Enter your new password',
                 keyboardType: TextInputType.text,
                 obscureText: passwordcontroller.isObscuredNew.value,
                 suffixIcon: IconButton(
@@ -66,9 +82,25 @@ class ResetPassword extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Text(
+                    'Confirm password',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16,
+                      color: Color(0xff050505),
+                    ),
+                  ),
+                ),
+              ],
+            ),
             Obx(
               () => CustomTextFormField(
-                hintText: 'Confirm Password',
+                hintText: 'Re-enter password',
                 keyboardType: TextInputType.text,
                 obscureText: passwordcontroller.isObscuredConfirm.value,
                 suffixIcon: IconButton(
@@ -95,7 +127,7 @@ class ResetPassword extends StatelessWidget {
             SizedBox(height: 30),
             GestureDetector(
               onTap: () => Get.to(ForgotPasswordHome()),
-              child: Button(title: 'Continue'),
+              child: Button(title: 'Update password'),
             ),
           ],
         ),

@@ -48,22 +48,79 @@ class SignUp extends StatelessWidget {
               ),
             ),
             SizedBox(height: 50),
-
-            CustomTextFormField(
-              hintText: 'Your name',
-              obscureText: false,
-              keyboardType: TextInputType.name,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Text(
+                    'Your Email',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16,
+                      color: Color(0xff050505),
+                    ),
+                  ),
+                ),
+              ],
             ),
-            SizedBox(height: 20),
             CustomTextFormField(
               hintText: 'arraihan815@gmail.com',
               keyboardType: TextInputType.emailAddress,
               obscureText: false,
             ),
             SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Text(
+                    'Password',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16,
+                      color: Color(0xff050505),
+                    ),
+                  ),
+                ),
+              ],
+            ),
             Obx(
               () => CustomTextFormField(
-                hintText: 'Password',
+                hintText: 'Emter your new password',
+                keyboardType: TextInputType.text,
+                obscureText: passwordcontroller.isObscured.value,
+                suffixIcon: IconButton(
+                  icon: Icon(
+                    passwordcontroller.isObscured.value
+                        ? Icons.visibility_off_outlined
+                        : Icons.visibility_outlined,
+                  ),
+                  onPressed: passwordcontroller.toggleObscureText,
+                ),
+              ),
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Text(
+                    'Confirm password',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16,
+                      color: Color(0xff050505),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Obx(
+              () => CustomTextFormField(
+                hintText: 'Re-enter Password',
                 keyboardType: TextInputType.text,
                 obscureText: passwordcontroller.isObscured.value,
                 suffixIcon: IconButton(
@@ -141,7 +198,7 @@ class SignUp extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () => print('Sign up pressed'),
-              child: Button(title: 'Sign up'),
+              child: Button(title: 'Sign Up'),
             ),
 
             SizedBox(height: 20),

@@ -27,7 +27,8 @@ class ForgetPassword extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Text(
-              'Enter your email account to reset your password',
+              textAlign: TextAlign.center,
+              'Enter your email account to reset\nyour password',
               style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 16,
@@ -35,6 +36,22 @@ class ForgetPassword extends StatelessWidget {
               ),
             ),
             SizedBox(height: 40),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Text(
+                    'Your Email',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16,
+                      color: Color(0xff050505),
+                    ),
+                  ),
+                ),
+              ],
+            ),
             CustomTextFormField(
               hintText: 'Please enter your email',
               obscureText: false,

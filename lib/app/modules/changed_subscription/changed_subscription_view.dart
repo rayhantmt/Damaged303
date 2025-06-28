@@ -105,7 +105,7 @@ class Subscription extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsets.only(left: 20),
                                 child: Text(
-                                  'Explorer Pro     \$99.9/year',
+                                  'Explorer Pro     \$89.9/year',
                                   style: TextStyle(
                                     fontWeight: FontWeight.w500,
                                     fontSize: 24,
@@ -193,7 +193,7 @@ class Subscription extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.only(left: 20),
                       child: Text(
-                        'Less than a daily latte.A lot more satisfying',
+                        'Less than a daily latte. A lot more satisfying.',
                         style: TextStyle(
                           fontWeight: FontWeight.w400,
                           color: Colors.white,

@@ -47,12 +47,44 @@ class LogInView extends StatelessWidget {
               ),
             ),
             SizedBox(height: 50),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Text(
+                    'Your Email',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16,
+                      color: Color(0xff050505),
+                    ),
+                  ),
+                ),
+              ],
+            ),
             CustomTextFormField(
               hintText: 'arraihan815@gmail.com',
               keyboardType: TextInputType.emailAddress,
               obscureText: false,
             ),
             SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Text(
+                    'Password',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16,
+                      color: Color(0xff050505),
+                    ),
+                  ),
+                ),
+              ],
+            ),
             Obx(
               () => CustomTextFormField(
                 hintText: 'Password',
@@ -137,7 +169,7 @@ class LogInView extends StatelessWidget {
 
             GestureDetector(
               onTap: () => Get.offAll(Subscription()),
-              child: Button(title: 'Log in'),
+              child: Button(title: 'Log In'),
             ),
 
             SizedBox(height: 20),
