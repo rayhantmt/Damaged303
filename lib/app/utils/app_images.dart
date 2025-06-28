@@ -21,4 +21,5 @@ class AppImages {
   static const String news2 = 'assets/images/news2.jpg';
   static const String news3 = 'assets/images/news3.jpg';
   static const String news4 = 'assets/images/news4.jpg';
+  static const String profie = 'assets/images/profile.png';
 }
