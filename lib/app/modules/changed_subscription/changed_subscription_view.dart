@@ -46,7 +46,7 @@ class Subscription extends StatelessWidget {
                       Icon(Icons.check_outlined, color: Colors.white),
                       SizedBox(width: 3),
                       Text(
-                        'Unlimited AI Persona access',
+                        'Unlimited AI Persona Access',
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w400,
@@ -105,7 +105,7 @@ class Subscription extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsets.only(left: 20),
                                 child: Text(
-                                  'Explorer Pro        \$99.9/year',
+                                  'Explorer Pro     \$99.9/year',
                                   style: TextStyle(
                                     fontWeight: FontWeight.w500,
                                     fontSize: 24,
@@ -116,7 +116,7 @@ class Subscription extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsets.only(left: 15),
                                 child: Text(
-                                  'Save 25%- Get 3 months Free',
+                                  'Save 25% - Get 3 months Free',
                                   style: TextStyle(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 14,
@@ -181,7 +181,7 @@ class Subscription extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(left: 20),
                       child: Text(
-                        'Explorer Pro         \$9.9/month  ',
+                        'Explorer Pro    \$9.9/month',
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 24,
@@ -227,7 +227,7 @@ class Subscription extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      'No Commitment. cancel anytime during trial Period.',
+                      'No Commitment.Cancel anytime during trial p               eriod.',
                       style: TextStyle(
                         fontWeight: FontWeight.w400,
                         fontSize: 12,
@@ -260,7 +260,7 @@ class Subscription extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 40),
+            SizedBox(height: 15),
             Text(
               'Terms and Privacy Policy',
               style: TextStyle(
