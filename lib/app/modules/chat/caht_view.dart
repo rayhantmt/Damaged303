@@ -163,56 +163,98 @@ class CahtView extends StatelessWidget {
                                   .length -
                               1 -
                               index];
-                      return Align(
-                        alignment: msg.isMe
-                            ? Alignment.centerRight
-                            : Alignment.centerLeft,
-                        child: Container(
-                          margin: EdgeInsets.symmetric(vertical: 4),
-                          padding: EdgeInsets.symmetric(
-                            horizontal: 12,
-                            vertical: 8,
-                          ),
-                          decoration: BoxDecoration(
-                            color: msg.isMe
-                                ? AppColors.primarycolor
-                                : Color(0xffE6ECEB),
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: msg.audioPath != null
-                              ? Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    IconButton(
-                                      icon: Icon(
-                                        Icons.play_arrow,
-                                        color: Colors.white,
+                      final isMe = msg.isMe;
+                      return Row(
+                        mainAxisAlignment: isMe
+                            ? MainAxisAlignment.end
+                            : MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          if (!isMe)
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                right: 8.0,
+                                left: 8.0,
+                                bottom: 4.0,
+                              ),
+                              child: CircleAvatar(
+                                radius: 18,
+                                backgroundImage:
+                                    chat_imng != null && chat_imng!.isNotEmpty
+                                    ? AssetImage(chat_imng!)
+                                    : AssetImage(
+                                        'assets/images/default_avatar.png',
                                       ),
-                                      onPressed: () async {
-                                        await audioPlayer.play(
-                                          DeviceFileSource(msg.audioPath!),
-                                        );
-                                      },
-                                    ),
-                                    Text(
-                                      'Voice message',
+                              ),
+                            ),
+                          Flexible(
+                            child: Container(
+                              margin: const EdgeInsets.symmetric(vertical: 4),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 12,
+                                vertical: 8,
+                              ),
+                              decoration: BoxDecoration(
+                                color: isMe
+                                    ? AppColors.primarycolor
+                                    : Color(0xffE6ECEB),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              child: msg.audioPath == null
+                                  ? Text(
+                                      msg.text,
                                       style: TextStyle(
-                                        color: msg.isMe
+                                        color: isMe
                                             ? Colors.white
                                             : Colors.black,
                                       ),
+                                      softWrap: true,
+                                      maxLines: null, // Allow unlimited lines
+                                      overflow: TextOverflow.visible,
+                                    )
+                                  : Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        IconButton(
+                                          icon: Icon(
+                                            Icons.play_arrow,
+                                            color: isMe
+                                                ? Colors.white
+                                                : Colors.black,
+                                          ),
+                                          onPressed: () async {
+                                            await audioPlayer.play(
+                                              DeviceFileSource(msg.audioPath!),
+                                            );
+                                          },
+                                        ),
+                                        Text(
+                                          'Voice message',
+                                          style: TextStyle(
+                                            color: isMe
+                                                ? Colors.white
+                                                : Colors.black,
+                                          ),
+                                        ),
+                                      ],
                                     ),
-                                  ],
-                                )
-                              : Text(
-                                  msg.text,
-                                  style: TextStyle(
-                                    color: msg.isMe
-                                        ? Colors.white
-                                        : Colors.black,
-                                  ),
+                            ),
+                          ),
+                          if (isMe)
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                left: 8.0,
+                                right: 8.0,
+                                bottom: 4.0,
+                              ),
+                              child: CircleAvatar(
+                                radius: 18,
+                                backgroundImage: AssetImage(
+                                  'assets/images/profile.png',
                                 ),
-                        ),
+                              ),
+                            ),
+                        ],
                       );
                     },
                   ),
