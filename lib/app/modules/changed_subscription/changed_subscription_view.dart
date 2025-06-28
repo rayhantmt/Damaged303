@@ -227,7 +227,7 @@ class Subscription extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      'No Commitment.Cancel anytime during trial p               eriod.',
+                      'No Commitment.Cancel anytime during trial period.',
                       style: TextStyle(
                         fontWeight: FontWeight.w400,
                         fontSize: 12,

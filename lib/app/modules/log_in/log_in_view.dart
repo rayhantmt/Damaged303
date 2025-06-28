@@ -39,7 +39,7 @@ class LogInView extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              'Please sign in to continue ',
+              'Please log in to continue ',
               style: TextStyle(
                 fontWeight: FontWeight.w400,
                 color: Color(0xFF7D848D),
@@ -169,7 +169,7 @@ class LogInView extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              'Or connect with',
+              'Or connect',
               style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 14,

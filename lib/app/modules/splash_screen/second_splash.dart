@@ -44,7 +44,7 @@ class SecondSplash extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 20),
                 child: Text(
-                  'Breaking News on Importa nt HR Topics',
+                  'Breaking News on Important HR Topics:',
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 18,
@@ -58,7 +58,7 @@ class SecondSplash extends StatelessWidget {
 
           SplashText(text: 'HR Strategy & Leadership'),
 
-          SplashText(text: 'Workforce Com liance & Re ulation'),
+          SplashText(text: 'Workforce Compliance & Regulation'),
           SplashText(text: 'Talent Acquisition & Labor Trends'),
           SplashText(text: 'Compensation, Benefits & Rewards'),
           SplashText(text: 'People Development & Culture'),
