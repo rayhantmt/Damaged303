@@ -25,7 +25,7 @@ class ForgotPasswordHome extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 20, right: 20),
             child: Text(
-              'Your password has been successfully reset. click confirm to set a new password',
+              'Your password has been successfully reset. Click confirm to set a new password',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontWeight: FontWeight.w400,

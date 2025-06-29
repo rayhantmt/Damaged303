@@ -41,7 +41,7 @@ class UpdatePassword extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              'The password must be different than before',
+              'The password must be different than previous',
               style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 14,

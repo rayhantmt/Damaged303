@@ -1,5 +1,7 @@
+import 'package:damaged303/app/common_widgets/privacy_policy.dart';
 import 'package:damaged303/app/modules/congratulaion_screen/congratulation_view.dart';
 import 'package:damaged303/app/modules/main_screen/main_screen_view.dart';
+import 'package:damaged303/app/modules/terms_of_use/terms_of_use.dart';
 import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:damaged303/app/utils/app_images.dart';
 import 'package:flutter/material.dart';
@@ -105,7 +107,7 @@ class Subscription extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsets.only(left: 20),
                                 child: Text(
-                                  'Explorer Pro     \$89.9/year',
+                                  'Explorer Pro   \$89.99/year',
                                   style: TextStyle(
                                     fontWeight: FontWeight.w500,
                                     fontSize: 24,
@@ -181,7 +183,7 @@ class Subscription extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(left: 20),
                       child: Text(
-                        'Explorer Pro    \$9.9/month',
+                        'Explorer Pro  \$9.99/month',
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 24,
@@ -227,7 +229,7 @@ class Subscription extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      'No Commitment.Cancel anytime during trial period.',
+                      'No commitment. Cancel anytime during trial period.',
                       style: TextStyle(
                         fontWeight: FontWeight.w400,
                         fontSize: 12,
@@ -250,7 +252,7 @@ class Subscription extends StatelessWidget {
                 Get.to(CongratulationView());
               },
               child: Text(
-                'Skip trial,Continue with limited free access.',
+                'Skip trial, continue with limited free access.',
                 style: TextStyle(
                   decoration: TextDecoration.underline,
                   decorationColor: Colors.white,
@@ -261,15 +263,56 @@ class Subscription extends StatelessWidget {
               ),
             ),
             SizedBox(height: 15),
-            Text(
-              'Terms and Privacy Policy',
-              style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 16,
-                color: Colors.white,
-                decoration: TextDecoration.underline,
-                decorationColor: Colors.white,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'I agree to the ',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    color: Colors.white,
+                    fontSize: 14,
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Get.to(TermsOfUse());
+                  },
+                  child: Text(
+                    'Terms of Use',
+                    style: TextStyle(
+                      decoration: TextDecoration.underline,
+                      decorationColor: Colors.white,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 14,
+                    ),
+                  ),
+                ),
+                Text(
+                  ' and ',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    color: Colors.white,
+                    fontSize: 14,
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Get.to(PrivacyPolicy());
+                  },
+                  child: Text(
+                    'Privacy Policy.',
+                    style: TextStyle(
+                      decoration: TextDecoration.underline,
+                      decorationColor: Colors.white,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 14,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),

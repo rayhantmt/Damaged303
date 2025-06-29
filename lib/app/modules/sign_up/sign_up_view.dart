@@ -40,7 +40,7 @@ class SignUp extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              'Please fill the details and create account',
+              'Please complete and create account',
               style: TextStyle(
                 fontWeight: FontWeight.w400,
                 color: Color(0xFF7D848D),
@@ -88,7 +88,7 @@ class SignUp extends StatelessWidget {
             ),
             Obx(
               () => CustomTextFormField(
-                hintText: 'Emter your new password',
+                hintText: 'Enter your new password',
                 keyboardType: TextInputType.text,
                 obscureText: passwordcontroller.isObscured.value,
                 suffixIcon: IconButton(

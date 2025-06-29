@@ -136,7 +136,23 @@ class NewsDetailsView extends StatelessWidget {
                   ),
                 ],
               ),
-
+              GestureDetector(
+                onTap: () {
+                  Get.snackbar(
+                    'All news content displayed is sourced from third-party providers and publicly available RSS feeds. Article summaries and AI-generated insights are provided for informational purposes only. Full credit and copyright remain with the original publisher. HRlynx is not responsible for the accuracy, timeliness, or completeness of third-party content. For full articles, please refer directly to the source.',
+                    '',
+                  );
+                },
+                child: Text(
+                  'Disclaimer',
+                  style: TextStyle(
+                    decoration: TextDecoration.underline,
+                    color: AppColors.primarycolor,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 10,
+                  ),
+                ),
+              ),
               SizedBox(height: 20),
             ],
           ),

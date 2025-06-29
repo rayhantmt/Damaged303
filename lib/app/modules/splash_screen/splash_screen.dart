@@ -28,7 +28,7 @@ class SplashScreen extends StatelessWidget {
           SizedBox(height: 40),
           Text(
             textAlign: TextAlign.center,
-            'Tailored for your role.\nBuilt for your challenges',
+            'Tailored for your role.\nBuilt for your challenges.',
             style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 16,

@@ -18,7 +18,7 @@ class ThirdSplash extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.asset(AppImages.splash, height: 200, width: 400),
-          // SizedBox(height: 30),
+          SizedBox(height: 35),
           Text(
             'Al HR Persona',
             style: TextStyle(
@@ -27,9 +27,9 @@ class ThirdSplash extends StatelessWidget {
               color: AppColors.primarycolor,
             ),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 45),
           Text(
-            ' Get fast, accurate HR Help From \n      Your AI-powered Assistant.',
+            ' Get fast, accurate HR help from \n      your AI-powered Assistant.',
             style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 16,
@@ -68,6 +68,7 @@ class ThirdSplash extends StatelessWidget {
               color: Color(0xFF050505),
             ),
           ),
+          SizedBox(height: 60),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
