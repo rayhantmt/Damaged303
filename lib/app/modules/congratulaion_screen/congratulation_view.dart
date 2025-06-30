@@ -19,7 +19,7 @@ class CongratulationView extends StatelessWidget {
           SizedBox(height: Get.height * .1),
           Image.asset(AppImages.coffee),
           Text(
-            'Congratulations',
+            'Congratulations!',
             style: TextStyle(
               fontWeight: FontWeight.w600,
               fontSize: 34,

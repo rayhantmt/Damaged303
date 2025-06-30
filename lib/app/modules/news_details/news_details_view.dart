@@ -42,7 +42,7 @@ class NewsDetailsView extends StatelessWidget {
             children: [
               SizedBox(height: 10),
               Text(
-                'Summarized by your AI\n            Assistant',
+                'Summarized by your AI\n          HR Assistant',
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: 22,

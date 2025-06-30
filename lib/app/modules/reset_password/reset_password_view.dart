@@ -88,7 +88,7 @@ class ResetPassword extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 20),
                   child: Text(
-                    'Confirm password',
+                    'Confirm Password',
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
                       fontSize: 16,
@@ -120,14 +120,14 @@ class ResetPassword extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 22),
-                  child: Text('Password must be 8 character'),
+                  child: Text('Password must be 8 characters'),
                 ),
               ],
             ),
             SizedBox(height: 30),
             GestureDetector(
               onTap: () => Get.to(ForgotPasswordHome()),
-              child: Button(title: 'Update password'),
+              child: Button(title: 'Update Password'),
             ),
           ],
         ),

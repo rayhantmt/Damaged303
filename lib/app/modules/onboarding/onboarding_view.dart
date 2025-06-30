@@ -33,11 +33,7 @@ class OnboardingView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-              height: 150,
-              width: 250,
-              child: Image.asset(AppImages.splash),
-            ),
+            Image.asset(AppImages.splash, height: 200, width: 400),
             Text(
               'Customize your experience by\n choosing an AI HR Assistant\n                  Persona!',
               style: TextStyle(

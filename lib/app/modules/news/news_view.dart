@@ -23,7 +23,7 @@ class NewsView extends StatelessWidget {
           child: Icon(Icons.arrow_back),
         ),
         title: Text(
-          'News Feed',
+          'Breaking HR News',
           style: TextStyle(
             fontWeight: FontWeight.w500,
             fontSize: 24,

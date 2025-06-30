@@ -18,7 +18,7 @@ class ForgetPassword extends StatelessWidget {
           children: [
             SizedBox(height: 150),
             Text(
-              'Forgot password',
+              'Forgot Password',
               style: TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 26,

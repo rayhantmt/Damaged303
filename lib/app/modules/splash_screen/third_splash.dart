@@ -14,13 +14,13 @@ class ThirdSplash extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.asset(AppImages.splash, height: 200, width: 400),
           SizedBox(height: 35),
           Text(
-            'Al HR Persona',
+            'Interactive AI HR Assistants',
             style: TextStyle(
               fontWeight: FontWeight.w600,
               fontSize: 32,
@@ -118,12 +118,20 @@ class ThirdSplash extends StatelessWidget {
               ),
             ],
           ),
-          GestureDetector(
-            onTap: () {
-              Get.offAll(OnboardingView());
-            },
-            child: Button(title: 'Next'),
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Get.offAll(OnboardingView());
+                  },
+                  child: Button(title: 'Next'),
+                ),
+              ],
+            ),
           ),
+          SizedBox(height: 10),
         ],
       ),
     );

@@ -218,7 +218,7 @@ class Subscription extends StatelessWidget {
               padding: EdgeInsets.only(left: 20, right: 20),
               child: Container(
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       'Start Free Trial',
@@ -238,7 +238,7 @@ class Subscription extends StatelessWidget {
                     ),
                   ],
                 ),
-                height: Get.height * .12,
+                height: Get.height * .10,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
@@ -266,14 +266,6 @@ class Subscription extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  'I agree to the ',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    color: Colors.white,
-                    fontSize: 14,
-                  ),
-                ),
                 GestureDetector(
                   onTap: () {
                     Get.to(TermsOfUse());

@@ -15,7 +15,7 @@ class SecondSplash extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.asset(AppImages.splash, height: 200, width: 400),
@@ -112,13 +112,20 @@ class SecondSplash extends StatelessWidget {
               ),
             ],
           ),
-          GestureDetector(
-            onTap: () {
-              Get.offAll(ThirdSplash());
-            },
-            child: Button(title: 'Next'),
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Get.offAll(ThirdSplash());
+                  },
+                  child: Button(title: 'Next'),
+                ),
+              ],
+            ),
           ),
-          SizedBox(height: 30),
+          SizedBox(height: 10),
         ],
       ),
     );

@@ -85,12 +85,20 @@ class SplashScreen extends StatelessWidget {
               ),
             ],
           ),
-          GestureDetector(
-            onTap: () {
-              Get.offAll(SecondSplash());
-            },
-            child: Button(title: 'Get Started'),
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Get.offAll(SecondSplash());
+                  },
+                  child: Button(title: 'Get Started'),
+                ),
+              ],
+            ),
           ),
+          SizedBox(height: 10),
         ],
       ),
     );

@@ -118,7 +118,7 @@ class HomeView extends StatelessWidget {
               ),
               SizedBox(height: 20),
               Text(
-                'Start a conversation with an AI HR Assistant:',
+                'Chat with your AI HR Assistants:',
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: 24,

@@ -30,7 +30,7 @@ class LogInView extends StatelessWidget {
           children: [
             SizedBox(height: 90),
             Text(
-              'Log in',
+              'Log In',
               style: TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 26,
@@ -189,7 +189,7 @@ class LogInView extends StatelessWidget {
                     Get.to(SignUp());
                   },
                   child: Text(
-                    'Sign up',
+                    'Sign Up',
                     style: TextStyle(
                       fontWeight: FontWeight.w400,
                       color: AppColors.primarycolor,

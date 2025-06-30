@@ -102,8 +102,10 @@ class OtpVerificationScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    'Resend code to',
+                    'Resend code',
+
                     style: TextStyle(
+                      decoration: TextDecoration.underline,
                       fontSize: 16,
                       color: Color(0xFF7D848D),
                       fontWeight: FontWeight.w400,

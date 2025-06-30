@@ -13,7 +13,7 @@ class NotificationsView extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          'Notification',
+          'Notifications',
           style: TextStyle(
             fontWeight: FontWeight.w500,
             fontSize: 24,

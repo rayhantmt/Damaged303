@@ -31,7 +31,7 @@ class SignUp extends StatelessWidget {
           children: [
             SizedBox(height: 90),
             Text(
-              'Sign up',
+              'Sign Up',
               style: TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 26,
@@ -88,7 +88,7 @@ class SignUp extends StatelessWidget {
             ),
             Obx(
               () => CustomTextFormField(
-                hintText: 'Enter your new password',
+                hintText: 'Enter your new Password',
                 keyboardType: TextInputType.text,
                 obscureText: passwordcontroller.isObscured.value,
                 suffixIcon: IconButton(
@@ -108,7 +108,7 @@ class SignUp extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 20),
                   child: Text(
-                    'Confirm password',
+                    'Confirm Password',
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
                       fontSize: 16,
@@ -139,7 +139,7 @@ class SignUp extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 20),
                   child: Text(
-                    'Password must be 8 character',
+                    'Password must be 8 characters',
                     style: TextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 14,
@@ -206,7 +206,7 @@ class SignUp extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Already have an account',
+                  'Already have an account?',
                   style: TextStyle(
                     fontWeight: FontWeight.w400,
                     color: Color(0xFF707B81),

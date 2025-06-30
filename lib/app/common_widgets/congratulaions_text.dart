@@ -27,7 +27,7 @@ class CongratulaionsText extends StatelessWidget {
         PremiumBasicText(tittle: 'Save Conversations'),
         SizedBox(height: 20),
         Text(
-          "Perk up your HR Game\n you're fully unlocked!",
+          "Time to perk up your HR game, you're fully unlocked!",
           style: TextStyle(
             fontWeight: FontWeight.w400,
             fontSize: 16,

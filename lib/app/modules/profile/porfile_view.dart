@@ -96,7 +96,7 @@ class PorfileView extends StatelessWidget {
               showDialog(
                 context: context,
                 builder: (context) => AlertDialog(
-                  title: Text('Log out', textAlign: TextAlign.center),
+                  title: Text('Log Out', textAlign: TextAlign.center),
                   content: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
