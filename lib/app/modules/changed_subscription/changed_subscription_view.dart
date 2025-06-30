@@ -103,11 +103,13 @@ class Subscription extends StatelessWidget {
                         children: [
                           Column(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Padding(
                                 padding: const EdgeInsets.only(left: 20),
                                 child: Text(
-                                  'Explorer Pro   \$89.99/year',
+                                  textAlign: TextAlign.center,
+                                  'Explorer Pro  \$89.99/year',
                                   style: TextStyle(
                                     fontWeight: FontWeight.w500,
                                     fontSize: 24,
@@ -118,6 +120,7 @@ class Subscription extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsets.only(left: 15),
                                 child: Text(
+                                  textAlign: TextAlign.center,
                                   'Save 25% - Get 3 months Free',
                                   style: TextStyle(
                                     fontWeight: FontWeight.w400,
@@ -178,29 +181,25 @@ class Subscription extends StatelessWidget {
               child: Container(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 20),
-                      child: Text(
-                        'Explorer Pro  \$9.99/month',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 24,
-                          color: Colors.white,
-                        ),
+                    Text(
+                      textAlign: TextAlign.center,
+                      'Explorer Pro   \$9.99/month       ',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 24,
+                        color: Colors.white,
                       ),
                     ),
 
-                    Padding(
-                      padding: EdgeInsets.only(left: 20),
-                      child: Text(
-                        'Less than a daily latte. A lot more satisfying.',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          color: Colors.white,
-                          fontSize: 14,
-                        ),
+                    Text(
+                      textAlign: TextAlign.center,
+                      'Less than a daily latte. A lot more satisfying.',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        color: Colors.white,
+                        fontSize: 14,
                       ),
                     ),
                   ],

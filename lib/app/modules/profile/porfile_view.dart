@@ -57,7 +57,7 @@ class PorfileView extends StatelessWidget {
             },
             child: ProfileHelp(
               icon: Icons.notifications_active_outlined,
-              text: 'Notification',
+              text: 'Notifications',
             ),
           ),
           SizedBox(height: 30),

@@ -148,7 +148,7 @@ class CahtView extends StatelessWidget {
                     decoration: TextDecoration.underline,
                     color: AppColors.primarycolor,
                     fontWeight: FontWeight.w400,
-                    fontSize: 10,
+                    fontSize: 12,
                   ),
                 ),
               ),

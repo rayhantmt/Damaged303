@@ -21,7 +21,7 @@ class ThirdSplash extends StatelessWidget {
           SizedBox(height: 35),
           Text(
             textAlign: TextAlign.center,
-            'Interactive AI HR Assistants',
+            'Interactive \nAI HR Assistants',
             style: TextStyle(
               fontWeight: FontWeight.w600,
               fontSize: 32,
