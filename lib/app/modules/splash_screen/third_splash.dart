@@ -20,6 +20,7 @@ class ThirdSplash extends StatelessWidget {
           Image.asset(AppImages.splash, height: 200, width: 400),
           SizedBox(height: 35),
           Text(
+            textAlign: TextAlign.center,
             'Interactive AI HR Assistants',
             style: TextStyle(
               fontWeight: FontWeight.w600,
@@ -29,7 +30,8 @@ class ThirdSplash extends StatelessWidget {
           ),
           SizedBox(height: 45),
           Text(
-            ' Get fast, accurate HR help from \n      your AI-powered Assistant.',
+            textAlign: TextAlign.center,
+            ' Supportive, insightful HR guidance - powered by AI, designed for you.',
             style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 16,
@@ -68,7 +70,7 @@ class ThirdSplash extends StatelessWidget {
               color: Color(0xFF050505),
             ),
           ),
-          SizedBox(height: 60),
+          SizedBox(height: 45),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

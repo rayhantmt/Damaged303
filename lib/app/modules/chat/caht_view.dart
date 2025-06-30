@@ -142,6 +142,7 @@ class CahtView extends StatelessWidget {
                   );
                 },
                 child: Text(
+                  textAlign: TextAlign.center,
                   'AI Guidance Only — Not Legal or HR Advice. Consult professionals for critical decisions.',
                   style: TextStyle(
                     decoration: TextDecoration.underline,
