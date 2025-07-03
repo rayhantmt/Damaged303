@@ -2,7 +2,7 @@ import 'package:damaged303/app/common_widgets/button.dart';
 import 'package:damaged303/app/common_widgets/privacy_policy.dart';
 import 'package:damaged303/app/common_widgets/profile_helper_text.dart';
 import 'package:damaged303/app/modules/changed_subscription/changed_subscription_view.dart';
-import 'package:damaged303/app/modules/foret_password/forget_password_view.dart';
+
 import 'package:damaged303/app/modules/log_in/log_in_view.dart';
 import 'package:damaged303/app/modules/notifications/notifications_view.dart';
 import 'package:damaged303/app/modules/terms_of_use/terms_of_use.dart';

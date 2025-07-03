@@ -1,6 +1,6 @@
 import 'package:damaged303/app/common_widgets/privacy_policy.dart';
 import 'package:damaged303/app/modules/congratulaion_screen/congratulation_view.dart';
-import 'package:damaged303/app/modules/main_screen/main_screen_view.dart';
+
 import 'package:damaged303/app/modules/terms_of_use/terms_of_use.dart';
 import 'package:damaged303/app/utils/app_colors.dart';
 import 'package:damaged303/app/utils/app_images.dart';
